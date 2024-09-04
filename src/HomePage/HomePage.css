@@ -5,7 +5,7 @@ body {
 
   color: var(--color-text);
   background-color: var(--color-background-900);
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .background-container {
@@ -15,7 +15,7 @@ body {
   background-position: center;
   height: 100vh;
   color: black;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 
 .content-container {
@@ -29,10 +29,6 @@ body {
   display: flex;
   flex-direction: column;
   position: absolute;
-}
-
-.divider {
-  width: 100vw;
 }
 
 .title {

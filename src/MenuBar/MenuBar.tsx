@@ -3,11 +3,10 @@ import React, { useEffect, useState } from "react";
 import "./MenuBar.css";
 
 interface MenuBarProps {
-  width: string;
   setPage: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const MenuBar: React.FC<MenuBarProps> = ({ width }) => {
+const MenuBar: React.FC<MenuBarProps> = ({ setPage }) => {
   const [menuHeight, setMenuHeight] = useState(window.innerHeight / 16);
   const [showMenu, setShowMenu] = useState(false);
 
@@ -39,9 +38,15 @@ const MenuBar: React.FC<MenuBarProps> = ({ width }) => {
 
       {showMenu && (
         <div className="nav-container">
-          <button className="nav-button">HOME</button>
-          <button className="nav-button">SHOWS</button>
-          <button className="nav-button">ABOUT</button>
+          <button className="nav-button" onClick={() => setPage("Home")}>
+            HOME
+          </button>
+          <button className="nav-button" onClick={() => setPage("Shows")}>
+            SHOWS
+          </button>
+          <button className="nav-button" onClick={() => setPage("About")}>
+            ABOUT
+          </button>
         </div>
       )}
     </div>

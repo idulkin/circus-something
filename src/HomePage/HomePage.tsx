@@ -13,7 +13,7 @@ const HomePage: React.FC<HomePageProps> = ({ setPage }) => {
   return (
     <div className="background-container">
       <div className="menu-container">
-        <MenuBar setPage={setPage} width={"100vw"} />
+        <MenuBar setPage={setPage} />
       </div>
       <div className="content-container">
         <div className="title-container">
