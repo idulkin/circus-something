@@ -4,7 +4,8 @@ import MenuBar from "../MenuBar/MenuBar";
 import "./ShowsPage.css";
 
 interface ShowsPageProps {
-  setPage: React.Dispatch<React.SetStateAction<string>>;
+  //   setPage: React.Dispatch<React.SetStateAction<string>>;
+  setPage: any;
 }
 
 const ShowsPage: React.FC<ShowsPageProps> = ({ setPage }) => {
@@ -15,6 +16,28 @@ const ShowsPage: React.FC<ShowsPageProps> = ({ setPage }) => {
       </div>
       <div className="content-container">
         <h1 className="title">SHOWS</h1>
+        <div>
+          <h2 className="sub-title">THE LONGEST DAY 2024</h2>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/DSkumonmxbE"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+        <div>
+          <h2 className="sub-title">THE LONGEST NIGHT 2023</h2>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/WJ3d_28mQr4"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
       </div>
     </div>
   );

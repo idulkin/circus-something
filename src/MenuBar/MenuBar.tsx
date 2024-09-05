@@ -3,7 +3,8 @@ import React, { useEffect, useState } from "react";
 import "./MenuBar.css";
 
 interface MenuBarProps {
-  setPage: React.Dispatch<React.SetStateAction<string>>;
+  // setPage: React.Dispatch<React.SetStateAction<string>>;
+  setPage: any;
 }
 
 const MenuBar: React.FC<MenuBarProps> = ({ setPage }) => {
@@ -34,7 +35,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ setPage }) => {
         </button>
         <button />
       </div>
-      <hr />
+      {/* <hr /> */}
 
       {showMenu && (
         <div className="nav-container">

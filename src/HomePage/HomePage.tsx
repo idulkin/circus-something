@@ -6,7 +6,8 @@ import MenuBar from "../MenuBar/MenuBar";
 import "./HomePage.css";
 
 interface HomePageProps {
-  setPage: React.Dispatch<React.SetStateAction<string>>;
+  // setPage: React.Dispatch<React.SetStateAction<string>>;
+  setPage: any;
 }
 
 const HomePage: React.FC<HomePageProps> = ({ setPage }) => {

@@ -6,6 +6,7 @@ import AboutPage from "./AboutPage/AboutPage";
 
 function App() {
   const [page, setPage] = useState("Home");
+
   return (
     <div className="App">
       {/* <MenuBar /> */}
