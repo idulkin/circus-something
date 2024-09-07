@@ -18,10 +18,41 @@
 }
 
 .content-container {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  border-radius: 10px;
+  background-color: transparent;
   text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.page-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.description-container {
+  margin-top: 4vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.row-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 4vw;
+  padding-bottom: 4vw;
+}
+
+.image-column {
+  display: flex;
+  flex-direction: column;
 }
 
 .menu-container {
@@ -63,8 +94,26 @@
 }
 
 .logo {
-  width: 30vw;
+  width: 200px;
   height: auto;
+}
+
+.text-white {
+  padding-left: 2vw;
+  padding-right: 2vw;
+  color: white;
+}
+
+.text-column {
+  padding: 2vw;
+  color: white;
+  width: 15vw;
+}
+
+.text-red {
+  padding-left: 2vw;
+  padding-right: 2vw;
+  color: red;
 }
 
 .overlay {
@@ -78,11 +127,4 @@
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-}
-
-.description {
-  color: white;
-  font-size: 1.25rem;
-  padding: 10px;
-  text-align: center;
 }

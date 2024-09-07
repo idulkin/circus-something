@@ -8,7 +8,7 @@ function App() {
   const [page, setPage] = useState("Home");
 
   return (
-    <div className="App">
+    <div>
       {/* <MenuBar /> */}
       {/* 
         

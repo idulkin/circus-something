@@ -2,10 +2,10 @@ import React from "react";
 
 import MenuBar from "../MenuBar/MenuBar";
 import "./ShowsPage.css";
+import CultSignup from "../CultSignup/CultSignup";
 
 interface ShowsPageProps {
-  //   setPage: React.Dispatch<React.SetStateAction<string>>;
-  setPage: any;
+  setPage: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const ShowsPage: React.FC<ShowsPageProps> = ({ setPage }) => {
@@ -38,6 +38,7 @@ const ShowsPage: React.FC<ShowsPageProps> = ({ setPage }) => {
             allowFullScreen
           ></iframe>
         </div>
+        <CultSignup />
       </div>
     </div>
   );

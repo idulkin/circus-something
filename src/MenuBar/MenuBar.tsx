@@ -3,8 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./MenuBar.css";
 
 interface MenuBarProps {
-  // setPage: React.Dispatch<React.SetStateAction<string>>;
-  setPage: any;
+  setPage: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const MenuBar: React.FC<MenuBarProps> = ({ setPage }) => {

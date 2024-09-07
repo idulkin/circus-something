@@ -1,0 +1,8 @@
+.background-container {
+  background-color: black;
+  overflow: hidden;
+}
+
+.text {
+  color: white;
+}

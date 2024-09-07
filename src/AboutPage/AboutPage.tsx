@@ -5,6 +5,7 @@ import masksOn from "../assets/masksOn.png";
 
 import MenuBar from "../MenuBar/MenuBar";
 import "./AboutPage.css";
+import CultSignup from "../CultSignup/CultSignup";
 
 interface AboutPageProps {
   setPage: React.Dispatch<React.SetStateAction<string>>;
@@ -16,12 +17,13 @@ const AboutPage: React.FC<AboutPageProps> = ({ setPage }) => {
       <div className="menu-container">
         <MenuBar setPage={setPage} />
       </div>
-      <div className="content-container">
+      <div className="page-container">
         <h2 className="title">ABOUT THE CREATORS</h2>
         <p className="text">
           Wife and husband duo Ash and Igor bring to you something… otherworldly
           and vaguely threatening.{" "}
         </p>
+
         <div className="description-container">
           <div className="about-container">
             <img src={masksOff} alt="Ash & Igor masks off" />
@@ -45,6 +47,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ setPage }) => {
               </p>
             </div>
           </div>
+
           <div className="about-container">
             <div className="description">
               <h2 className="title">IGOR DULKIN SOMETHING</h2>
@@ -68,6 +71,8 @@ const AboutPage: React.FC<AboutPageProps> = ({ setPage }) => {
             <img src={masksOn} alt="Ash & Igor masks off" />
           </div>
         </div>
+
+        <CultSignup />
       </div>
     </div>
   );
