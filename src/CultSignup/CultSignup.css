@@ -3,6 +3,20 @@
   overflow: hidden;
 }
 
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit-button {
+  background-color: transparent;
+  color: white;
+  border: 0;
+  cursor: pointer;
+  font-size: large;
+}
+
 .text {
   color: white;
 }

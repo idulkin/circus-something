@@ -17,10 +17,13 @@
 }
 
 .content-container {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 20px;
-  border-radius: 10px;
   text-align: center;
+}
+
+.page-container {
+  background-color: black;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .menu-container {
@@ -36,5 +39,45 @@
 }
 
 .sub-title {
+  font-size: l.5rem;
   color: white;
+}
+
+.text {
+  color: white;
+}
+
+.image {
+  width: 500px;
+  height: auto;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+.bottom-image {
+  align-self: center;
+  width: 80vw;
+  height: auto;
+}
+
+.link {
+  background-color: white;
+  color: black;
+  width: fit-content;
+  align-self: center;
+  text-decoration: none;
+  padding: 4px;
+  border-radius: 2px;
+}
+
+.show-description {
+  display: flex;
+  flex-direction: row;
+  padding: 4vw;
+}
+
+.column {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
 }
