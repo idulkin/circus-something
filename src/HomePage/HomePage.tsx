@@ -32,6 +32,22 @@ const HomePage: React.FC<HomePageProps> = ({ setPage }) => {
         </div> */}
         <div className="description-container">
           <p className="text-white">
+            We find ourselves back yet again, on the winter solstice celebrating
+            the beauty of the night. But what happens to the light when things
+            get dark? On the longest night of the year, Circus Something
+            sacrifices the light and explores the complexities of darkness with
+            new and returning performances from The Slither Sirens, The Vampire
+            Vixen of The Bay, The Grim Theatre, and many more!
+          </p>
+          <a
+            href="https://circussomething.ticketspice.com/the-longest-night-2024"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ fontSize: "1.5rem", color: "red", padding: "1rem" }}
+          >
+            Tickets for The Longest Night 2024
+          </a>
+          <p className="text-white">
             What if the light was not what you thought it was? Light sparkles
             and shines, burns and blinds. Light can be beautiful and misleading.
             White is not always good, honest, and innocent. Bright is not always
