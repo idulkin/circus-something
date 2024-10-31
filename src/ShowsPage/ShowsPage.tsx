@@ -63,7 +63,7 @@ const ShowsPage: React.FC<ShowsPageProps> = ({ setPage }) => {
               <img
                 src={LongestDay2024}
                 className="image"
-                alt="Longest Day 2024 Cast Photo"
+                alt="Longest Day 2024 Cast"
               />
             </div>
           </div>
@@ -84,7 +84,7 @@ const ShowsPage: React.FC<ShowsPageProps> = ({ setPage }) => {
               <img
                 src={LongestNight2024}
                 className="image"
-                alt="Longest Night 2023 Cast Photo"
+                alt="Longest Night 2023 Cast"
               />
             </div>
             <div className="column">

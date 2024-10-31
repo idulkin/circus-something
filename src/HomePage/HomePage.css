@@ -50,6 +50,22 @@
   padding-bottom: 4vw;
 }
 
+.text-column {
+  padding: 2vw;
+  color: white;
+  width: 30vw;
+}
+
+@media (max-width: 768px) {
+  .row-container {
+    flex-direction: column;
+  }
+
+  .text-column {
+    width: 70vw;
+  }
+}
+
 .image-column {
   display: flex;
   flex-direction: column;
@@ -94,7 +110,7 @@
 }
 
 .logo {
-  width: 200px;
+  width: 20vw;
   height: auto;
 }
 
@@ -102,12 +118,6 @@
   padding-left: 2vw;
   padding-right: 2vw;
   color: white;
-}
-
-.text-column {
-  padding: 2vw;
-  color: white;
-  width: 15vw;
 }
 
 .text-red {

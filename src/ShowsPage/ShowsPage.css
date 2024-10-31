@@ -76,6 +76,24 @@
   padding: 4vw;
 }
 
+@media (max-width: 768px) {
+  .show-description {
+    flex-direction: column;
+  }
+
+  .image {
+    width: 70vw;
+  }
+
+  .text {
+    width: 70vw;
+  }
+
+  .bottom-image {
+    width: 70vw;
+  }
+}
+
 .column {
   display: flex;
   flex: 1;
