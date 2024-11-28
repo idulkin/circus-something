@@ -39,14 +39,21 @@ const HomePage: React.FC<HomePageProps> = ({ setPage }) => {
             new and returning performances from The Slither Sirens, The Vampire
             Vixen of The Bay, The Grim Theatre, and many more!
           </p>
-          <a
-            href="https://circussomething.ticketspice.com/the-longest-night-2024"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ fontSize: "1.5rem", color: "red", padding: "1rem" }}
-          >
-            Tickets for The Longest Night 2024
-          </a>
+          <div className="ticket-container">
+            <a
+              href="https://circussomething.ticketspice.com/the-longest-night-2024"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                fontSize: "2.5rem",
+                color: "black",
+                padding: "1rem",
+                textDecoration: "none",
+              }}
+            >
+              Tickets for The Longest Night 2024
+            </a>
+          </div>
           <p className="text-white">
             What if the light was not what you thought it was? Light sparkles
             and shines, burns and blinds. Light can be beautiful and misleading.
