@@ -1,16 +1,48 @@
 import React from "react";
 import CS_logo_only from "../assets/CS_logo_only.png";
 import title_logo from "../assets/cs-final-logotype-white_orig.png";
+import Page1 from "../assets/TLN2024Program/1.png";
+import Page2 from "../assets/TLN2024Program/2.png";
+import Page3 from "../assets/TLN2024Program/3.png";
+import Page4 from "../assets/TLN2024Program/4.png";
+import Page5 from "../assets/TLN2024Program/5.png";
+import Page6 from "../assets/TLN2024Program/6.png";
+import Page7 from "../assets/TLN2024Program/7.png";
 
 import MenuBar from "../MenuBar/MenuBar";
 import "./HomePage.css";
 import CultSignup from "../CultSignup/CultSignup";
+import Carousel from "react-multi-carousel";
 
 interface HomePageProps {
   setPage: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const HomePage: React.FC<HomePageProps> = ({ setPage }) => {
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
+  const [showProgramModal, setShowProgramModal] = React.useState(false);
+
+  const handleOpenModal = () => {
+    setShowProgramModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowProgramModal(false);
+  };
+
   return (
     <div className="background-container">
       <div className="menu-container">
@@ -30,6 +62,7 @@ const HomePage: React.FC<HomePageProps> = ({ setPage }) => {
           />
           <div className="overlay"></div>
         </div> */}
+
         <div className="description-container">
           <p className="text-white">
             We find ourselves back yet again, on the winter solstice celebrating
@@ -54,6 +87,60 @@ const HomePage: React.FC<HomePageProps> = ({ setPage }) => {
               Tickets for The Longest Night 2024
             </a>
           </div>
+
+          <div className="ticket-container">
+            <button
+              onClick={showProgramModal ? handleCloseModal : handleOpenModal}
+              style={{
+                fontSize: "1.5rem",
+                color: "black",
+                padding: "1rem",
+                textDecoration: "none",
+              }}
+            >
+              The Longest Night 2024 Show Program
+            </button>
+          </div>
+          {showProgramModal && (
+            <div
+              className="modal"
+              style={{
+                width: "100%",
+              }}
+            >
+              <div className="modal-content">
+                <Carousel
+                  responsive={responsive}
+                  swipeable={true}
+                  centerMode={true}
+                >
+                  <div>
+                    <img src={Page1} style={{ width: "150%" }} />
+                  </div>
+                  <div>
+                    <img src={Page2} style={{ width: "150%" }} />
+                  </div>
+                  <div>
+                    <img src={Page3} style={{ width: "150%" }} />
+                  </div>
+                  <div>
+                    <img src={Page4} style={{ width: "150%" }} />
+                  </div>
+                  <div>
+                    <img src={Page5} style={{ width: "150%" }} />
+                  </div>
+                  <div>
+                    <img src={Page6} style={{ width: "150%" }} />
+                  </div>
+                  <div>
+                    <img src={Page7} style={{ width: "150%" }} />
+                  </div>
+                </Carousel>
+              </div>
+              <button onClick={handleCloseModal}>Close</button>
+            </div>
+          )}
+
           <p className="text-white">
             What if the light was not what you thought it was? Light sparkles
             and shines, burns and blinds. Light can be beautiful and misleading.
