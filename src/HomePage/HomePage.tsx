@@ -73,22 +73,6 @@ const HomePage: React.FC<HomePageProps> = ({ setPage }) => {
             Vixen of The Bay, The Grim Theatre, and many more!
           </p>
           <div className="ticket-container">
-            <a
-              href="https://circussomething.ticketspice.com/the-longest-night-2024"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                fontSize: "2.5rem",
-                color: "black",
-                padding: "1rem",
-                textDecoration: "none",
-              }}
-            >
-              Tickets for The Longest Night 2024
-            </a>
-          </div>
-
-          <div className="ticket-container">
             <button
               onClick={showProgramModal ? handleCloseModal : handleOpenModal}
               style={{
