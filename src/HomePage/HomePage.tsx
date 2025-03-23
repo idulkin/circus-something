@@ -64,7 +64,7 @@ const HomePage: React.FC<HomePageProps> = ({ setPage }) => {
         </div> */}
 
         <div className="description-container">
-          <p className="text-white">
+          {/* <p className="text-white">
             We find ourselves back yet again, on the winter solstice celebrating
             the beauty of the night. But what happens to the light when things
             get dark? On the longest night of the year, Circus Something
@@ -123,7 +123,7 @@ const HomePage: React.FC<HomePageProps> = ({ setPage }) => {
               </div>
               <button onClick={handleCloseModal}>Close</button>
             </div>
-          )}
+          )} */}
 
           <p className="text-white">
             What if the light was not what you thought it was? Light sparkles
