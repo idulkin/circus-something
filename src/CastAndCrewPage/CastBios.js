@@ -7,7 +7,7 @@ export const castBios = {
   Amanda: {
     name: "Amanda",
     description: `Performing with Circus Something since it’s inception in 2023, Amanda is a beloved Slither Siren, Shadow Monster, and Luminary. A world traveler, dog mama, contortion student, and lover of all things dark and macabre, Amanda has been an asset to both The Slither Sirens and Circus Something since joining the crew. She brings da booty and a bag ‘o’ deez nuts to hold ya down. And she will, hold ya down... By the throat if you assume her sweet face is an invitation. It’s not. Leave her alone`,
-    image: "CS_logo_only.png",
+    image: "CastAndCrew/Amanda.jpg",
   },
   Helen: {
     name: "Silver Adder",
