@@ -6,11 +6,12 @@
   justify-content: "center";
   padding-left: 8px;
   padding-right: 8px;
-  padding-top: 8px;
+  padding-top: 16px;
+  margin-right: 16px;
 }
 
 .bio-image {
-  max-width: 20%;
+  max-width: 30%;
   height: auto;
 }
 

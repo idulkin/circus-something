@@ -74,6 +74,8 @@
 .image-column {
   display: flex;
   flex-direction: column;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .menu-container {

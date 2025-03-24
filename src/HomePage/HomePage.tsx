@@ -1,6 +1,8 @@
 import React from "react";
 import CS_logo_only from "../assets/CS_logo_only.png";
 import title_logo from "../assets/cs-final-logotype-white_orig.png";
+import Patreon from "../assets/Patreon.png";
+import Intensive from "../assets/Performance Intensive.png";
 import Page1 from "../assets/TLN2024Program/1.png";
 import Page2 from "../assets/TLN2024Program/2.png";
 import Page3 from "../assets/TLN2024Program/3.png";
@@ -124,6 +126,22 @@ const HomePage: React.FC<HomePageProps> = ({ setPage }) => {
               <button onClick={handleCloseModal}>Close</button>
             </div>
           )} */}
+
+          <a
+            href="https://www.patreon.com/circussomething"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={Patreon} style={{ width: "50%" }} />
+          </a>
+          <p></p>
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfouSMrpCwNwHeFcolQatJWdDXY53XrqQOBWoUgp-7RkdUY4Q/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={Intensive} style={{ width: "50%" }} />
+          </a>
 
           <p className="text-white">
             What if the light was not what you thought it was? Light sparkles
