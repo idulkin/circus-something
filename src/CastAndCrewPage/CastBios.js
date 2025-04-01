@@ -10,7 +10,7 @@ export const castBios = {
     image: "CastAndCrew/Amanda.jpg",
   },
   Helen: {
-    name: "Silver Adder",
+    name: "Adder",
     description:
       "Helen is a dancer and beginner contortionist with a passion for performing. She has been dancing for around a decade, but has just started getting more serious about being on stage in the past few years. Her background is in yoga, contemporary dance and bellydance, which all in turn led her to pursue contortion starting in 2021.",
     image: "CastAndCrew/Helen.jpg",
