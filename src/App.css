@@ -23,7 +23,8 @@ a,
 li,
 span,
 div {
-  font-family: inherit; /* Ensure these elements inherit the font from the body */
+  font-family: "NersansOneRegular", sans-serif;
+  /* font-family: inherit; Ensure these elements inherit the font from the body */
 }
 
 .App {
