@@ -1,6 +1,7 @@
 @font-face {
   font-family: "NersansOneRegular";
-  src: url("/public/fonts/NersansOneRegular.otf") format("opentype");
+  src: url("/public/fonts/NersansOneRegular.otf") format("opentype"),
+    url("/public/fonts/NersansOneRegular.ttf") format("truetype");
 }
 
 body {
