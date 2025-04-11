@@ -115,14 +115,14 @@
   padding-left: 2vw;
   padding-right: 2vw;
   color: white;
-  font-family: "NersansOneRegular", sans-serif;
+  /* font-family: "NersansOneRegular", sans-serif; */
 }
 
 .text-red {
   padding-left: 2vw;
   padding-right: 2vw;
   color: red;
-  font-family: "NersansOneRegular", sans-serif;
+  /* font-family: "NersansOneRegular", sans-serif; */
 }
 
 .overlay {

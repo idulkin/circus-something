@@ -1,10 +1,11 @@
 @font-face {
   font-family: "NersansOneRegular";
-  src: url("./assets/fonts/NersansOneRegular.otf") format("opentype");
+  src: url("/public/fonts/NersansOneRegular.otf") format("opentype");
 }
 
 body {
   font-family: "NersansOneRegular", sans-serif;
+  /* font-family: "Helvetica Neue", sans-serif; */
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
@@ -23,8 +24,7 @@ a,
 li,
 span,
 div {
-  font-family: "NersansOneRegular", sans-serif;
-  /* font-family: inherit; Ensure these elements inherit the font from the body */
+  font-family: inherit;
 }
 
 .App {
