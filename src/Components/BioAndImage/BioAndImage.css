@@ -1,0 +1,35 @@
+.bio-and-image {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: black;
+  justify-content: "center";
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 16px;
+  margin-right: 16px;
+}
+
+.bio-image {
+  max-width: 30%;
+  height: auto;
+}
+
+.bio-text {
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 1rem;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .bio-and-image {
+    flex-direction: column;
+  }
+  .bio-image {
+    max-width: 90%;
+  }
+  .bio-text {
+    margin-left: 0;
+  }
+}
