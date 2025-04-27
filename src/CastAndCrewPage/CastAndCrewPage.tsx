@@ -3,7 +3,7 @@ import React from "react";
 import MenuBar from "../MenuBar/MenuBar";
 import "./CastAndCrewPage.css";
 import CultSignup from "../CultSignup/CultSignup";
-import BioAndImage from "../Components/BioAndImage";
+import BioAndImage from "../Components/BioAndImage/BioAndImage";
 import { castBios } from "./CastBios";
 
 interface CastAndCrewPageProps {

@@ -6,7 +6,7 @@ import masksOn from "../assets/masksOn.png";
 import MenuBar from "../MenuBar/MenuBar";
 import "./AboutPage.css";
 import CultSignup from "../CultSignup/CultSignup";
-import BioAndImage from "../Components/BioAndImage";
+import BioAndImage from "../Components/BioAndImage/BioAndImage";
 import { aboutBios } from "./AboutBios";
 
 interface AboutPageProps {
