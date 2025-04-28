@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import ImageCarousel from "../Program/ImageCarousel";
+import "./ShowDescription.css";
 
 interface ShowDescriptionProps {
   title: string;
@@ -10,7 +11,8 @@ interface ShowDescriptionProps {
   photoLink?: string;
   photoLinkText?: string;
   imagePosition?: "left" | "right";
-  showProgram?: any[];
+  showProgram?: string[];
+  programTitle?: string;
 }
 
 const ShowDescription: React.FC<ShowDescriptionProps> = ({
@@ -22,6 +24,8 @@ const ShowDescription: React.FC<ShowDescriptionProps> = ({
   photoLink,
   photoLinkText,
   imagePosition = "right",
+  showProgram = [],
+  programTitle,
 }) => {
   const textColumn = (
     <div className="column">
@@ -49,11 +53,21 @@ const ShowDescription: React.FC<ShowDescriptionProps> = ({
     </div>
   );
 
-  //   const programColumn = (
-  //     <div className="column">
-  //       <ImageCarousel program={showProgram} />
-  //     </div>
-  //   );
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const programColumn = (
+    <div className="program-container">
+      <button className="program-button" onClick={() => setIsModalOpen(true)}>
+        {programTitle}
+      </button>
+
+      <ImageCarousel
+        images={showProgram}
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
+    </div>
+  );
 
   return (
     <div>
@@ -69,13 +83,19 @@ const ShowDescription: React.FC<ShowDescriptionProps> = ({
       <div className="show-description">
         {imagePosition === "right" ? (
           <>
-            {textColumn}
+            <div className="column">
+              {textColumn}
+              {programTitle && programColumn}
+            </div>
             {imageColumn}
           </>
         ) : (
           <>
             {imageColumn}
-            {textColumn}
+            <div className="column">
+              {textColumn}
+              {programTitle && programColumn}
+            </div>
           </>
         )}
       </div>

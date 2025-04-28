@@ -1,0 +1,64 @@
+.program-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.program-button {
+  background: none;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-family: inherit;
+}
+
+.program-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.column {
+  flex-direction: column;
+}
+
+/* Update ImageCarousel styles */
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  background: none;
+  padding: 40px;
+}
+
+.close-button {
+  color: #ffffff;
+  font-size: 32px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.close-button:hover {
+  opacity: 1;
+}
+
+.nav-button {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  width: 50px;
+  height: 50px;
+  font-size: 32px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.carousel-image {
+  max-height: 80vh;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}

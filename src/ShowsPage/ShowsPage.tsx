@@ -9,12 +9,21 @@ import MenuBar from "../MenuBar/MenuBar";
 import "./ShowsPage.css";
 import CultSignup from "../CultSignup/CultSignup";
 import ShowDescription from "../Components/ShowDescription/ShowDescription";
+import TLN1 from "../assets/TLN2024Program/1.png";
+import TLN2 from "../assets/TLN2024Program/2.png";
+import TLN3 from "../assets/TLN2024Program/3.png";
+import TLN4 from "../assets/TLN2024Program/4.png";
+import TLN5 from "../assets/TLN2024Program/5.png";
+import TLN6 from "../assets/TLN2024Program/6.png";
+import TLN7 from "../assets/TLN2024Program/7.png";
 
 interface ShowsPageProps {
   setPage: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const ShowsPage: React.FC<ShowsPageProps> = ({ setPage }) => {
+  const tln2024Program = [TLN1, TLN2, TLN3, TLN4, TLN5, TLN6, TLN7];
+
   return (
     <div className="background-container">
       <div className="menu-container">
@@ -35,6 +44,8 @@ const ShowsPage: React.FC<ShowsPageProps> = ({ setPage }) => {
             photoLink="https://firedragonphotography.pixieset.com/thelongestnight-openingnight/"
             photoLinkText="Pictures from The Longest Night 2024"
             imagePosition="left"
+            showProgram={tln2024Program}
+            programTitle="THE LONGEST NIGHT 2024 PROGRAM"
           />
 
           <ShowDescription
