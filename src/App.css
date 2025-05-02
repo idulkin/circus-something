@@ -1,12 +1,11 @@
 @font-face {
   font-family: "NersansOneRegular";
-  src: url("/public/fonts/NersansOneRegular.otf") format("opentype"),
-    url("/public/fonts/NersansOneRegular.ttf") format("truetype");
+  src: url("./fonts/NersansOneRegular.otf") format("opentype"),
+    url("./fonts/NersansOneRegular.ttf") format("truetype");
 }
 
 body {
   font-family: "NersansOneRegular", sans-serif;
-  /* font-family: "Helvetica Neue", sans-serif; */
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
