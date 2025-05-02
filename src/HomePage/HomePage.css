@@ -15,12 +15,7 @@
   flex-direction: column;
   width: 100vw;
 }
-.ticket-container {
-  background-color: red;
-  border-radius: 4px;
-  margin: 16px;
-  padding: 4px;
-}
+
 .page-container {
   text-align: center;
   display: flex;
@@ -115,14 +110,12 @@
   padding-left: 2vw;
   padding-right: 2vw;
   color: white;
-  /* font-family: "NersansOneRegular", sans-serif; */
 }
 
 .text-red {
   padding-left: 2vw;
   padding-right: 2vw;
   color: red;
-  /* font-family: "NersansOneRegular", sans-serif; */
 }
 
 .overlay {
@@ -136,4 +129,23 @@
   align-items: center;
   justify-content: center;
   border-radius: 8px;
+}
+
+.ticket-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  margin-bottom: 40px;
+}
+
+.ticket-button {
+  background: none;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-family: inherit;
 }

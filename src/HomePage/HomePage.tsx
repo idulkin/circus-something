@@ -50,83 +50,23 @@ const HomePage: React.FC<HomePageProps> = ({ setPage }) => {
       <div className="menu-container">
         <MenuBar setPage={setPage} />
       </div>
-      {/* <div className="content-container"> */}
       <div className="page-container">
         <div className="title-container">
           <img src={title_logo} className="title-logo" alt="Circus Something" />
           <h2 className="subtitle">Avant-garde ritual circus theater</h2>
         </div>
-        {/* <div className="image-container">
-          <img
-            src="https://via.placeholder.com/800x400"
-            alt="Placeholder"
-            className="background-image"
-          />
-          <div className="overlay"></div>
-        </div> */}
-
         <div className="description-container">
-          {/* <p className="text-white">
-            We find ourselves back yet again, on the winter solstice celebrating
-            the beauty of the night. But what happens to the light when things
-            get dark? On the longest night of the year, Circus Something
-            sacrifices the light and explores the complexities of darkness with
-            new and returning performances from The Slither Sirens, The Vampire
-            Vixen of The Bay, The Grim Theatre, and many more!
-          </p>
           <div className="ticket-container">
-            <button
-              onClick={showProgramModal ? handleCloseModal : handleOpenModal}
-              style={{
-                fontSize: "1.5rem",
-                color: "black",
-                padding: "1rem",
-                textDecoration: "none",
-              }}
+            <a
+              href="https://circussomething.ticketspice.com/the-longest-day-2025"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              The Longest Night 2024 Show Program
-            </button>
+              <button className="ticket-button">
+                TICKETS FOR THE LONGEST DAY
+              </button>
+            </a>
           </div>
-          {showProgramModal && (
-            <div
-              className="modal"
-              style={{
-                width: "100%",
-              }}
-            >
-              <div className="modal-content">
-                <Carousel
-                  responsive={responsive}
-                  swipeable={true}
-                  centerMode={true}
-                >
-                  <div>
-                    <img src={Page1} style={{ width: "150%" }} />
-                  </div>
-                  <div>
-                    <img src={Page2} style={{ width: "150%" }} />
-                  </div>
-                  <div>
-                    <img src={Page3} style={{ width: "150%" }} />
-                  </div>
-                  <div>
-                    <img src={Page4} style={{ width: "150%" }} />
-                  </div>
-                  <div>
-                    <img src={Page5} style={{ width: "150%" }} />
-                  </div>
-                  <div>
-                    <img src={Page6} style={{ width: "150%" }} />
-                  </div>
-                  <div>
-                    <img src={Page7} style={{ width: "150%" }} />
-                  </div>
-                </Carousel>
-              </div>
-              <button onClick={handleCloseModal}>Close</button>
-            </div>
-          )} */}
-
           <a
             href="https://www.patreon.com/circussomething"
             target="_blank"
