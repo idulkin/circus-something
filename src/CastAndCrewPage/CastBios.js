@@ -1,4 +1,10 @@
 export const castBios = {
+  Sparkles: {
+    name: "Sparkles DeVine",
+    description:
+      "Sparkles Devine; The Cosmic Magpie is the host of the iconic San Francisco based burlesque show Hex.SF, in addition to presiding over the ceremonies of Circus Something. They are a towering titillating tease whose work orients around community gathering, social change, and lots of skin. Sparkles combines elements of traditional drag and burlesque with a flair for the avant-garde and a touch of toosh.",
+    image: "CastAndCrew/Sparkles.jpg",
+  },
   Irene: {
     name: "Irene",
     description: `Irene started with a simple goal: "just get my splits." What followed was a journey into the art of contortion, where she discovered the strange and beautiful joy of twisting her body into new realms of possibility. A member of the Slither Sirens since 2022, Irene now returns as the embodiment of darkness, exploring what happens when light fades and the unknown takes form.`,
