@@ -83,7 +83,6 @@
 }
 
 .nav-button {
-  background-color: black;
   color: white;
   border: 0;
   cursor: pointer;
@@ -94,8 +93,10 @@
   text-align: left;
   width: auto;
   max-width: 300px;
-  min-width: 120px;
+  min-width: 180px;
   font-family: inherit;
+  background: rgba(255, 255, 255, 0.3) !important;
+  border-radius: 8px !important;
 }
 
 .nav-button:hover {
