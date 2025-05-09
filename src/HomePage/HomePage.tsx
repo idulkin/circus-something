@@ -75,14 +75,6 @@ const HomePage: React.FC<HomePageProps> = ({ setPage }) => {
             <img src={Patreon} style={{ width: "50%" }} />
           </a>
           <p></p>
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfouSMrpCwNwHeFcolQatJWdDXY53XrqQOBWoUgp-7RkdUY4Q/viewform"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src={Intensive} style={{ width: "50%" }} />
-          </a>
-
           <p className="text-white">
             What if the light was not what you thought it was? Light sparkles
             and shines, burns and blinds. Light can be beautiful and misleading.
