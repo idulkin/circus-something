@@ -2,7 +2,7 @@ export const castBios = {
   Sparkles: {
     name: "Sparkles DeVine",
     description:
-      "Sparkles Devine; The Cosmic Magpie is the host of the iconic San Francisco based burlesque show Hex.SF, in addition to presiding over the ceremonies of Circus Something. They are a towering titillating tease whose work orients around community gathering, social change, and lots of skin. Sparkles combines elements of traditional drag and burlesque with a flair for the avant-garde and a touch of toosh.",
+      "Sparkles Devine; The Cosmic Magpie is the host of the iconic San Francisco based burlesque show Hex.SF, in addition to serving as the in-betweener of light and dark for the rituals of Circus Something. They are a towering titillating tease whose work orients around community gathering, social change, and lots of skin. Sparkles combines elements of traditional drag and burlesque with a flair for the avant-garde and a touch of toosh.",
     image: "CastAndCrew/Sparkles.jpg",
   },
   Irene: {

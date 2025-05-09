@@ -32,9 +32,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ setPage }) => {
         <button className="menu-button" onClick={handleClickMenu}>
           MENU
         </button>
-        <button />
       </div>
-      {/* <hr /> */}
 
       {showMenu && (
         <div className="nav-container">
@@ -48,7 +46,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ setPage }) => {
             ABOUT
           </button>
           <button className="nav-button" onClick={() => setPage("CastAndCrew")}>
-            CAST & CREW
+            COMPANY
           </button>
         </div>
       )}
