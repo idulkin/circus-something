@@ -56,18 +56,17 @@ const HomePage: React.FC<HomePageProps> = ({ setPage }) => {
           <h2 className="subtitle">Avant-garde ritual circus theater</h2>
         </div>
         <div className="description-container">
-          {/* Commented out until tickets are ready
           <div className="ticket-container">
             <a
-              href="https://circussomething.ticketspice.com/the-longest-day-2025"
+              href="https://circussomething.ticketspice.com/the-longest-night-2025-"
               target="_blank"
               rel="noopener noreferrer"
             >
               <button className="ticket-button">
-                TICKETS FOR THE LONGEST DAY
+                TICKETS FOR THE LONGEST NIGHT
               </button>
             </a>
-          </div> */}
+          </div>
           <a
             href="https://www.patreon.com/circussomething"
             target="_blank"
