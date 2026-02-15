@@ -1,37 +1,51 @@
 .menu-bar {
   background-color: transparent;
   width: 100%;
-  padding: 10px 0;
+  padding: var(--spacing-md) 0;
+  position: relative;
+  z-index: 1000;
 }
 
 .button-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 30px; /* Adds consistent spacing between buttons */
-  padding: 0 40px;
+  gap: var(--spacing-xl);
+  padding: 0 var(--spacing-2xl);
   width: 100%;
-  max-width: 1200px; /* Prevents excessive stretching on wide screens */
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .menu-button {
-  background-color: transparent;
-  color: white;
-  border: 0;
+  background: var(--color-surface);
+  color: var(--color-primary);
+  border: 2px solid var(--color-border);
   cursor: pointer;
-  font-size: 1.2rem;
-  white-space: nowrap; /* Prevents text wrapping */
-  padding: 8px 16px;
-  transition: opacity 0.2s ease;
+  font-size: var(--font-size-xl);
+  white-space: nowrap;
+  padding: var(--spacing-md) var(--spacing-xl);
+  transition: all var(--transition-base);
   text-align: left;
-  width: 100%;
-  max-width: 300px;
+  width: auto;
+  min-width: 120px;
   font-family: inherit;
+  border-radius: var(--radius-md);
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-sm);
 }
 
 .menu-button:hover {
-  opacity: 0.8;
+  background: var(--color-surface-hover);
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.menu-button:active {
+  transform: translateY(0);
 }
 
 .nav-container {
@@ -39,57 +53,98 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 10px 40px;
+  padding: var(--spacing-md) var(--spacing-2xl);
   width: auto;
-  gap: 10px; /* Consistent spacing between nav items */
+  gap: var(--spacing-sm);
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .nav-button {
-  color: white;
-  border: 0;
+  color: var(--color-primary);
+  border: 2px solid transparent;
   cursor: pointer;
-  padding: 8px 16px;
-  font-size: 0.9rem;
+  padding: var(--spacing-md) var(--spacing-xl);
+  font-size: var(--font-size-base);
   white-space: nowrap;
-  transition: opacity 0.2s ease;
+  transition: all var(--transition-base);
   text-align: left;
   width: auto;
   max-width: 300px;
   min-width: 180px;
   font-family: inherit;
-  background: rgba(255, 255, 255, 0.3) !important;
-  border-radius: 8px !important;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  backdrop-filter: blur(10px);
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
 }
 
 .nav-button:hover {
-  opacity: 0.8;
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--color-border);
+  transform: translateX(5px);
+  box-shadow: var(--shadow-md);
 }
 
-/* Add responsive design for smaller screens */
+.nav-button:active {
+  transform: translateX(3px);
+}
+
+/* Responsive design */
 @media (max-width: 768px) {
   .nav-container {
-    width: 160px;
-    padding: 10px 20px;
+    width: auto;
+    padding: var(--spacing-md) var(--spacing-lg);
   }
 
   .button-container {
-    padding: 0 20px;
-    gap: 15px;
+    padding: 0 var(--spacing-lg);
+    gap: var(--spacing-lg);
   }
 
-  .menu-button,
+  .menu-button {
+    font-size: var(--font-size-lg);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    min-width: 100px;
+  }
+
   .nav-button {
-    font-size: 0.8rem;
-    padding: 6px 12px;
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
     max-width: 200px;
+    min-width: 160px;
   }
 }
 
-/* Add even smaller screen size handling */
 @media (max-width: 480px) {
-  .menu-button,
+  .button-container {
+    padding: 0 var(--spacing-md);
+  }
+
+  .nav-container {
+    padding: var(--spacing-md);
+  }
+
+  .menu-button {
+    font-size: var(--font-size-base);
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
   .nav-button {
     max-width: 180px;
-    font-size: 0.7rem;
+    min-width: 140px;
+    font-size: var(--font-size-xs);
   }
 }

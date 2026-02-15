@@ -1,23 +1,56 @@
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: var(--spacing-2xl) auto;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 .program-container {
   display: flex;
   justify-content: center;
-  margin: 20px 0;
+  margin: var(--spacing-xl) 0;
 }
 
 .program-button {
-  background: none;
-  border: 2px solid #ffffff;
-  color: #ffffff;
-  padding: 10px 20px;
-  font-size: 1.2em;
+  background: linear-gradient(135deg, var(--color-surface), rgba(255, 255, 255, 0.08));
+  border: 2px solid var(--color-border);
+  color: var(--color-primary);
+  padding: var(--spacing-md) var(--spacing-xl);
+  font-size: var(--font-size-lg);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all var(--transition-base);
   text-transform: uppercase;
   font-family: inherit;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(10px);
 }
 
 .program-button:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.18));
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.program-button:active {
+  transform: translateY(0);
 }
 
 .column {
@@ -31,14 +64,14 @@
 
 .modal-content {
   background: none;
-  padding: 40px;
+  padding: var(--spacing-3xl);
 }
 
 .close-button {
-  color: #ffffff;
+  color: var(--color-primary);
   font-size: 32px;
   opacity: 0.8;
-  transition: opacity 0.3s ease;
+  transition: opacity var(--transition-base);
 }
 
 .close-button:hover {
@@ -47,11 +80,11 @@
 
 .nav-button {
   background: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+  color: var(--color-primary);
   width: 50px;
   height: 50px;
   font-size: 32px;
-  transition: background-color 0.3s ease;
+  transition: background-color var(--transition-base);
 }
 
 .nav-button:hover {
@@ -61,4 +94,18 @@
 .carousel-image {
   max-height: 80vh;
   border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+}
+
+@media (max-width: 768px) {
+  .video-container {
+    max-width: 100%;
+    margin: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .program-button {
+    font-size: var(--font-size-base);
+    padding: var(--spacing-sm) var(--spacing-lg);
+  }
 }
