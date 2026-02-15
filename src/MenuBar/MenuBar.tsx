@@ -34,16 +34,16 @@ const MenuBar: React.FC = () => {
 
       {showMenu && (
         <div className="nav-container">
-          <button className="nav-button" onClick={() => navigate("/")}>
+          <button className="menu-nav-button" onClick={() => navigate("/")}>
             HOME
           </button>
-          <button className="nav-button" onClick={() => navigate("/shows")}>
+          <button className="menu-nav-button" onClick={() => navigate("/shows")}>
             SHOWS
           </button>
-          <button className="nav-button" onClick={() => navigate("/about")}>
+          <button className="menu-nav-button" onClick={() => navigate("/about")}>
             ABOUT
           </button>
-          <button className="nav-button" onClick={() => navigate("/company")}>
+          <button className="menu-nav-button" onClick={() => navigate("/company")}>
             COMPANY
           </button>
         </div>
