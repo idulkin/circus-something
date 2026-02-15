@@ -9,15 +9,11 @@ import CultSignup from "../CultSignup/CultSignup";
 import BioAndImage from "../Components/BioAndImage/BioAndImage";
 import { aboutBios } from "./AboutBios";
 
-interface AboutPageProps {
-  setPage: React.Dispatch<React.SetStateAction<string>>;
-}
-
-const AboutPage: React.FC<AboutPageProps> = ({ setPage }) => {
+const AboutPage: React.FC = () => {
   return (
     <div className="background-container">
       <div className="menu-container">
-        <MenuBar setPage={setPage} />
+        <MenuBar />
       </div>
       <div className="page-container">
         <h2 className="title">ABOUT THE CREATORS</h2>

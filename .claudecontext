@@ -1,0 +1,14 @@
+# Include all TypeScript and JS files
+
+src/\*_/_.{ts,tsx,js,jsx}
+src/\*_/_.css
+
+# Include specific config files
+
+package.json
+tsconfig.json
+
+# Include documentation
+
+README.md
+docs/\*_/_.md

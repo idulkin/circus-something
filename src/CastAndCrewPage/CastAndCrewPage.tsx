@@ -6,15 +6,11 @@ import CultSignup from "../CultSignup/CultSignup";
 import BioAndImage from "../Components/BioAndImage/BioAndImage";
 import { castBios } from "./CastBios";
 
-interface CastAndCrewPageProps {
-  setPage: React.Dispatch<React.SetStateAction<string>>;
-}
-
-const CastAndCrewPage: React.FC<CastAndCrewPageProps> = ({ setPage }) => {
+const CastAndCrewPage: React.FC = () => {
   return (
     <div className="background-container">
       <div className="menu-container">
-        <MenuBar setPage={setPage} />
+        <MenuBar />
       </div>
       <div className="page-container">
         <h2 className="title">COMPANY MEMBERS</h2>

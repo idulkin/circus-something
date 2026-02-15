@@ -2,53 +2,16 @@ import React from "react";
 import CS_logo_only from "../assets/CS_logo_only.png";
 import title_logo from "../assets/cs-final-logotype-white_orig.png";
 import Patreon from "../assets/Patreon.png";
-import Intensive from "../assets/Performance Intensive.png";
-import Page1 from "../assets/TLN2024Program/1.png";
-import Page2 from "../assets/TLN2024Program/2.png";
-import Page3 from "../assets/TLN2024Program/3.png";
-import Page4 from "../assets/TLN2024Program/4.png";
-import Page5 from "../assets/TLN2024Program/5.png";
-import Page6 from "../assets/TLN2024Program/6.png";
-import Page7 from "../assets/TLN2024Program/7.png";
 
 import MenuBar from "../MenuBar/MenuBar";
 import "./HomePage.css";
 import CultSignup from "../CultSignup/CultSignup";
-import Carousel from "react-multi-carousel";
 
-interface HomePageProps {
-  setPage: React.Dispatch<React.SetStateAction<string>>;
-}
-
-const HomePage: React.FC<HomePageProps> = ({ setPage }) => {
-  const responsive = {
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
-  };
-  const [showProgramModal, setShowProgramModal] = React.useState(false);
-
-  const handleOpenModal = () => {
-    setShowProgramModal(true);
-  };
-
-  const handleCloseModal = () => {
-    setShowProgramModal(false);
-  };
-
+const HomePage: React.FC = () => {
   return (
     <div className="background-container">
       <div className="menu-container">
-        <MenuBar setPage={setPage} />
+        <MenuBar />
       </div>
       <div className="page-container">
         <div className="title-container">
@@ -72,7 +35,7 @@ const HomePage: React.FC<HomePageProps> = ({ setPage }) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={Patreon} style={{ width: "50%" }} />
+            <img src={Patreon} style={{ width: "50%" }} alt="Support us on Patreon" />
           </a>
           <p></p>
           <p className="text-white">

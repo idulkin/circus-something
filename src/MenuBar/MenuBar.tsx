@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import "./MenuBar.css";
 
-interface MenuBarProps {
-  setPage: React.Dispatch<React.SetStateAction<string>>;
-}
-
-const MenuBar: React.FC<MenuBarProps> = ({ setPage }) => {
+const MenuBar: React.FC = () => {
+  const navigate = useNavigate();
   const [menuHeight, setMenuHeight] = useState(window.innerHeight / 16);
   const [showMenu, setShowMenu] = useState(false);
 
@@ -36,16 +34,16 @@ const MenuBar: React.FC<MenuBarProps> = ({ setPage }) => {
 
       {showMenu && (
         <div className="nav-container">
-          <button className="nav-button" onClick={() => setPage("Home")}>
+          <button className="nav-button" onClick={() => navigate("/")}>
             HOME
           </button>
-          <button className="nav-button" onClick={() => setPage("Shows")}>
+          <button className="nav-button" onClick={() => navigate("/shows")}>
             SHOWS
           </button>
-          <button className="nav-button" onClick={() => setPage("About")}>
+          <button className="nav-button" onClick={() => navigate("/about")}>
             ABOUT
           </button>
-          <button className="nav-button" onClick={() => setPage("CastAndCrew")}>
+          <button className="nav-button" onClick={() => navigate("/company")}>
             COMPANY
           </button>
         </div>

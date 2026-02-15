@@ -17,17 +17,13 @@ import TLN5 from "../assets/TLN2024Program/5.png";
 import TLN6 from "../assets/TLN2024Program/6.png";
 import TLN7 from "../assets/TLN2024Program/7.png";
 
-interface ShowsPageProps {
-  setPage: React.Dispatch<React.SetStateAction<string>>;
-}
-
-const ShowsPage: React.FC<ShowsPageProps> = ({ setPage }) => {
+const ShowsPage: React.FC = () => {
   const tln2024Program = [TLN1, TLN2, TLN3, TLN4, TLN5, TLN6, TLN7];
 
   return (
     <div className="background-container">
       <div className="menu-container">
-        <MenuBar setPage={setPage} />
+        <MenuBar />
       </div>
       <div className="content-container">
         <h1 className="title">SHOWS</h1>

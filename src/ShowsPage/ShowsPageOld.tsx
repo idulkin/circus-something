@@ -43,11 +43,11 @@ const ShowsPage: React.FC<ShowsPageProps> = ({ setPage }) => {
                 fans.{" "}
               </p>
               <p className="text">
-                Don't forget, the magic is only real because you believe.{" "}
+                Don&apos;t forget, the magic is only real because you believe.{" "}
               </p>
               <p className="text">
                 See the pictures from the show by our incredible photographer
-                Gloria at Fire Dragon Photography, she's really much better than
+                Gloria at Fire Dragon Photography, she&apos;s really much better than
                 you on your phone:
               </p>
               <a
@@ -94,7 +94,7 @@ const ShowsPage: React.FC<ShowsPageProps> = ({ setPage }) => {
                 all of our artists, supporters, lovers, friends, and fans.{" "}
               </p>
               <p className="text">
-                Don't forget, the magic is only real because you believe.{" "}
+                Don&apos;t forget, the magic is only real because you believe.{" "}
               </p>
               <p className="text">
                 Check out pictures from the show by our incredible photographer

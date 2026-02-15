@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import HomePage from "./HomePage/HomePage";
 import ShowsPage from "./ShowsPage/ShowsPage";
@@ -6,15 +7,15 @@ import AboutPage from "./AboutPage/AboutPage";
 import CastAndCrewPage from "./CastAndCrewPage/CastAndCrewPage";
 
 function App() {
-  const [page, setPage] = useState("Home");
-
   return (
-    <div>
-      {page === "Home" && <HomePage setPage={setPage} />}
-      {page === "Shows" && <ShowsPage setPage={setPage} />}
-      {page === "About" && <AboutPage setPage={setPage} />}
-      {page === "CastAndCrew" && <CastAndCrewPage setPage={setPage} />}
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/shows" element={<ShowsPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/company" element={<CastAndCrewPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
