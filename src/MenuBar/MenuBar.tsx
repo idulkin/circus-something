@@ -28,14 +28,14 @@ const MenuBar: React.FC = () => {
     <div className="menu-bar">
       <div className="button-container" style={{ height: menuHeight }}>
         <button
-          className={`menu-button ${showMenu ? 'menu-open' : ''}`}
+          className={`menu-button ${showMenu ? "menu-open" : ""}`}
           onClick={handleClickMenu}
         >
-          MENU
+          CHOOSE
         </button>
       </div>
 
-      <div className={`nav-container ${showMenu ? 'nav-visible' : ''}`}>
+      <div className={`nav-container ${showMenu ? "nav-visible" : ""}`}>
         <button className="menu-nav-button" onClick={() => navigate("/")}>
           HOME
         </button>
@@ -45,7 +45,10 @@ const MenuBar: React.FC = () => {
         <button className="menu-nav-button" onClick={() => navigate("/about")}>
           ABOUT
         </button>
-        <button className="menu-nav-button" onClick={() => navigate("/company")}>
+        <button
+          className="menu-nav-button"
+          onClick={() => navigate("/company")}
+        >
           COMPANY
         </button>
       </div>
