@@ -13,6 +13,8 @@ interface ShowDescriptionProps {
   imagePosition?: "left" | "right";
   showProgram?: string[];
   programTitle?: string;
+  isExpanded?: boolean;
+  onToggle?: () => void;
 }
 
 const ShowDescription: React.FC<ShowDescriptionProps> = ({
@@ -26,6 +28,8 @@ const ShowDescription: React.FC<ShowDescriptionProps> = ({
   imagePosition = "right",
   showProgram = [],
   programTitle,
+  isExpanded = true,
+  onToggle,
 }) => {
   const textColumn = (
     <div className="column">
@@ -71,34 +75,69 @@ const ShowDescription: React.FC<ShowDescriptionProps> = ({
 
   return (
     <div>
-      <h2 className="sub-title">{title}</h2>
-      <div className="video-container">
-        <iframe
-          src={videoUrl}
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
-      </div>
-      <div className="show-description">
-        {imagePosition === "right" ? (
-          <>
-            <div className="column">
-              {textColumn}
-              {programTitle && programColumn}
-            </div>
-            {imageColumn}
-          </>
-        ) : (
-          <>
-            {imageColumn}
-            <div className="column">
-              {textColumn}
-              {programTitle && programColumn}
-            </div>
-          </>
+      <h2
+        className="sub-title"
+        onClick={onToggle}
+        onKeyDown={(e) => {
+          if (onToggle && (e.key === "Enter" || e.key === " ")) {
+            e.preventDefault();
+            onToggle();
+          }
+        }}
+        tabIndex={onToggle ? 0 : undefined}
+        role={onToggle ? "button" : undefined}
+        aria-expanded={onToggle ? isExpanded : undefined}
+        style={{
+          cursor: onToggle ? "pointer" : "default",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+        }}
+      >
+        <span>{title}</span>
+        {onToggle && (
+          <span
+            style={{
+              transform: isExpanded ? "rotate(180deg)" : "rotate(0deg)",
+              transition: "transform 0.3s ease",
+              fontSize: "0.8em",
+            }}
+          >
+            ▼
+          </span>
         )}
-      </div>
+      </h2>
+      {isExpanded && (
+        <>
+          <div className="video-container">
+            <iframe
+              src={videoUrl}
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+          <div className="show-description">
+            {imagePosition === "right" ? (
+              <>
+                <div className="column">
+                  {textColumn}
+                  {programTitle && programColumn}
+                </div>
+                {imageColumn}
+              </>
+            ) : (
+              <>
+                {imageColumn}
+                <div className="column">
+                  {textColumn}
+                  {programTitle && programColumn}
+                </div>
+              </>
+            )}
+          </div>
+        </>
+      )}
     </div>
   );
 };

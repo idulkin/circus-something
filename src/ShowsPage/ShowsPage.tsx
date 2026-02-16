@@ -1,5 +1,5 @@
 // ... (keep existing imports and add:)
-import React from "react";
+import React, { useState } from "react";
 
 import LongestDay2024 from "../assets/LongestDay2024.png";
 import LongestNight2024 from "../assets/LongestNight2024.png";
@@ -19,6 +19,11 @@ import TLN7 from "../assets/TLN2024Program/7.png";
 
 const ShowsPage: React.FC = () => {
   const tln2024Program = [TLN1, TLN2, TLN3, TLN4, TLN5, TLN6, TLN7];
+  const [expandedShowIndex, setExpandedShowIndex] = useState<number | null>(null);
+
+  const handleToggle = (index: number) => {
+    setExpandedShowIndex(expandedShowIndex === index ? null : index);
+  };
 
   return (
     <div className="background-container">
@@ -42,6 +47,8 @@ const ShowsPage: React.FC = () => {
             imagePosition="left"
             showProgram={tln2024Program}
             programTitle="THE LONGEST NIGHT 2024 PROGRAM"
+            isExpanded={expandedShowIndex === 0}
+            onToggle={() => handleToggle(0)}
           />
 
           <ShowDescription
@@ -57,6 +64,8 @@ const ShowsPage: React.FC = () => {
             photoLink="https://firedragonphotography.pixieset.com/longestday-saturday/"
             photoLinkText="Pictures from The Longest Day 2024"
             imagePosition="right"
+            isExpanded={expandedShowIndex === 1}
+            onToggle={() => handleToggle(1)}
           />
 
           <ShowDescription
@@ -72,6 +81,8 @@ const ShowsPage: React.FC = () => {
             photoLink="https://firedragonphotography.pixieset.com/thelongestnight/"
             photoLinkText="Pictures from The Longest Night 2023"
             imagePosition="left"
+            isExpanded={expandedShowIndex === 2}
+            onToggle={() => handleToggle(2)}
           />
 
           <img

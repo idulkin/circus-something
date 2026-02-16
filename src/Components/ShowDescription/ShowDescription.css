@@ -1,3 +1,37 @@
+.sub-title {
+  transition: all var(--transition-base);
+  user-select: none;
+  text-align: center;
+}
+
+.sub-title[role="button"] {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-md, 8px);
+  padding: var(--spacing-lg, 1.5rem) var(--spacing-xl, 2rem);
+  margin: var(--spacing-lg, 1.5rem) var(--spacing-3xl, 3rem);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sub-title[role="button"]:hover {
+  background: linear-gradient(135deg, rgba(211, 211, 211, 0.8), rgba(192, 192, 192, 0.9));
+  border-color: rgba(255, 255, 255, 0.8);
+  color: var(--color-background);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.sub-title[role="button"]:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sub-title[role="button"]:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+}
+
 .video-container {
   position: relative;
   width: 100%;
@@ -99,6 +133,11 @@
 }
 
 @media (max-width: 768px) {
+  .sub-title[role="button"] {
+    margin: var(--spacing-lg, 1.5rem) var(--spacing-md, 1rem);
+    padding: var(--spacing-md, 1rem) var(--spacing-lg, 1.25rem);
+  }
+
   .video-container {
     max-width: 100%;
     margin: var(--spacing-lg) var(--spacing-md);
