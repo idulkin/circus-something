@@ -27,27 +27,28 @@ const MenuBar: React.FC = () => {
   return (
     <div className="menu-bar">
       <div className="button-container" style={{ height: menuHeight }}>
-        <button className="menu-button" onClick={handleClickMenu}>
+        <button
+          className={`menu-button ${showMenu ? 'menu-open' : ''}`}
+          onClick={handleClickMenu}
+        >
           MENU
         </button>
       </div>
 
-      {showMenu && (
-        <div className="nav-container">
-          <button className="menu-nav-button" onClick={() => navigate("/")}>
-            HOME
-          </button>
-          <button className="menu-nav-button" onClick={() => navigate("/shows")}>
-            SHOWS
-          </button>
-          <button className="menu-nav-button" onClick={() => navigate("/about")}>
-            ABOUT
-          </button>
-          <button className="menu-nav-button" onClick={() => navigate("/company")}>
-            COMPANY
-          </button>
-        </div>
-      )}
+      <div className={`nav-container ${showMenu ? 'nav-visible' : ''}`}>
+        <button className="menu-nav-button" onClick={() => navigate("/")}>
+          HOME
+        </button>
+        <button className="menu-nav-button" onClick={() => navigate("/shows")}>
+          SHOWS
+        </button>
+        <button className="menu-nav-button" onClick={() => navigate("/about")}>
+          ABOUT
+        </button>
+        <button className="menu-nav-button" onClick={() => navigate("/company")}>
+          COMPANY
+        </button>
+      </div>
     </div>
   );
 };
