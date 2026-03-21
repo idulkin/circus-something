@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import CS_logo_only from "../assets/CS_logo_only.png";
 import title_logo from "../assets/cs-final-logotype-white_orig.png";
 import Patreon from "../assets/Patreon.png";
+import IntensiveFront from "../assets/IntensiveFront.png";
+import IntensiveBack from "../assets/IntensiveBack.png";
 
 import MenuBar from "../MenuBar/MenuBar";
 import "./HomePage.css";
 import CultSignup from "../CultSignup/CultSignup";
 
 const HomePage: React.FC = () => {
+  const [flipped, setFlipped] = useState(false);
+
   return (
     <div className="background-container">
       <div className="menu-container">
@@ -30,6 +34,22 @@ const HomePage: React.FC = () => {
               </button>
             </a>
           </div> */}
+          <a
+            className={`intensive-card${flipped ? " flipped" : ""}`}
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdWNUC3FZd0YORMkNxtsalRoNSd8fMcR9z7stHJdAf8iNdxjg/viewform?pli=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => {
+              if (!flipped) {
+                e.preventDefault();
+                setFlipped(true);
+              }
+            }}
+          >
+            <img src={IntensiveFront} className="intensive-front" alt="Intensive show poster - front" />
+            <img src={IntensiveBack} className="intensive-back" alt="Intensive show poster - back" />
+            <span className="intensive-tap-hint">{flipped ? "Tap to open" : "Tap to reveal"}</span>
+          </a>
           <hr className="section-divider" />
           <div className="patreon-container">
             <a

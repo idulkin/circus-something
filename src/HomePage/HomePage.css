@@ -233,6 +233,75 @@
   }
 }
 
+.intensive-card {
+  position: relative;
+  display: block;
+  width: min(60vw, 500px);
+  margin: var(--spacing-xl) auto;
+  cursor: pointer;
+}
+
+.intensive-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-md);
+  transition: opacity 0.4s ease;
+}
+
+.intensive-card .intensive-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+/* Desktop: hover reveals back */
+@media (hover: hover) {
+  .intensive-card:hover .intensive-back {
+    opacity: 1;
+  }
+
+  .intensive-card:hover .intensive-front {
+    opacity: 0;
+  }
+}
+
+/* Mobile: tap toggles */
+@media (hover: none) {
+  .intensive-card.flipped .intensive-back {
+    opacity: 1;
+  }
+
+  .intensive-card.flipped .intensive-front {
+    opacity: 0;
+  }
+}
+
+.intensive-tap-hint {
+  display: none;
+  position: absolute;
+  bottom: var(--spacing-sm);
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+@media (hover: none) {
+  .intensive-tap-hint {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .intensive-card {
+    width: min(85vw, 400px);
+  }
+}
+
 .ticket-container {
   display: flex;
   justify-content: center;
