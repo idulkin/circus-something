@@ -41,7 +41,7 @@ const CultSignup: React.FC = () => {
   };
 
   return (
-    <div className="background-container">
+    <div className="cult-signup-container">
       <h2 className="text">Join the cult</h2>
       <form onSubmit={handleSubmit}>
         <input

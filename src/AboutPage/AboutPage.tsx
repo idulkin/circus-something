@@ -34,8 +34,8 @@ const AboutPage: React.FC = () => {
           description={aboutBios.Igor.description}
           imageRightOfText={false}
         />
-        <CultSignup />
       </div>
+      <CultSignup />
     </div>
   );
 };

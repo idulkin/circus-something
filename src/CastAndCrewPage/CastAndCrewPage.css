@@ -13,7 +13,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
 }
 
 .page-container {
@@ -21,7 +21,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
 }
 .menu-container {
   display: flex;

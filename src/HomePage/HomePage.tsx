@@ -30,13 +30,26 @@ const HomePage: React.FC = () => {
               </button>
             </a>
           </div> */}
-          <a
-            href="https://www.patreon.com/circussomething"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src={Patreon} style={{ width: "50%" }} alt="Support us on Patreon" />
-          </a>
+          <hr className="section-divider" />
+          <div className="patreon-container">
+            <a
+              href="https://www.patreon.com/circussomething"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={Patreon}
+                style={{ width: "60%" }}
+                alt="Support us on Patreon"
+              />
+            </a>
+            <p className="text-red patreon-text">
+              The cult demands sacrifice. What are you willing to give? Your
+              support ensures that we continue to bring you the highest level of
+              theatrical occult indoctrination.
+            </p>
+          </div>
+          <hr className="section-divider" />
           <p></p>
           <p className="text-white">
             What if the light was not what you thought it was? Light sparkles
@@ -80,8 +93,8 @@ const HomePage: React.FC = () => {
             </p>
           </div>
         </div>
-        <CultSignup />
       </div>
+      <CultSignup />
     </div>
   );
 };

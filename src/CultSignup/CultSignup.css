@@ -1,5 +1,5 @@
-.background-container {
-  background-color: var(--color-background);
+.cult-signup-container {
+  background-color: transparent;
   overflow: hidden;
   padding: var(--spacing-3xl) var(--spacing-md);
 }
@@ -73,7 +73,7 @@ form input[type="email"]:focus {
 }
 
 @media (max-width: 768px) {
-  .background-container {
+  .cult-signup-container {
     padding: var(--spacing-2xl) var(--spacing-md);
   }
 

@@ -3,9 +3,8 @@
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  height: 100vh;
+  min-height: 100vh;
   color: black;
-  overflow-y: scroll;
 }
 
 .content-container {
@@ -13,7 +12,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
 }
 
 .page-container {
@@ -21,7 +20,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
 }
 
 .menu-container {
