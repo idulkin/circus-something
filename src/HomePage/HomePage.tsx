@@ -59,7 +59,7 @@ const HomePage: React.FC = () => {
             >
               <img
                 src={Patreon}
-                style={{ width: "60%" }}
+                className="patreon-image"
                 alt="Support us on Patreon"
               />
             </a>
