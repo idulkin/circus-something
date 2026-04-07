@@ -46,4 +46,9 @@ export const castBios = {
     description: `Shannon Burla is an international performer and a teacher of sword dance hailing from Oakland, California. Shannon is inspired by the seasons and by change...by the crossroads, mist and wildflowers. She is the creatrix of the sword dance style, Sword Magick and an ordained Priestess of the Elements in The Order of the Stag and the Rose.`,
     image: "CastAndCrew/Shannon.jpg",
   },
+  Klowndra: {
+    name: "Klowndra",
+    description: `Klowndra is an explosive creature. They can be found all over the Bay Area: performing in circus shows, juggling at protests, twisting balloons for elders, puppeteering for children, miming with trees, and roller skating all over your face. This award winning clown strives to make art that injects humanity right into the pulse of the people.`,
+    image: "CastAndCrew/klowndra.jpg",
+  },
 };
