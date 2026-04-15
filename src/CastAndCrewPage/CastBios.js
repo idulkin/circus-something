@@ -25,7 +25,7 @@ export const castBios = {
     name: "Lucy aka Diamondback",
     description:
       "Based in SF, Lucy Wonsower is a visual artist turned performer who seeks new forms of expression and storytelling through strength, flexibility, and grace. She is most fragrant.",
-    image: "CastAndrew/Lucy.jpg",
+    image: "CastAndCrew/Lucy.jpg",
   },
   Quin: {
     name: "Harlequin Grim",
