@@ -6,20 +6,26 @@ export const castBios = {
     image: "CastAndCrew/Sparkles.jpg",
   },
   Irene: {
-    name: "Irene",
+    name: "Irene aka White Lipped Python",
     description: `Irene started with a simple goal: "just get my splits." What followed was a journey into the art of contortion, where she discovered the strange and beautiful joy of twisting her body into new realms of possibility. A member of the Slither Sirens since 2022, Irene now returns as the embodiment of darkness, exploring what happens when light fades and the unknown takes form.`,
     image: "CastAndCrew/Irene.jpg",
   },
   Amanda: {
-    name: "Amanda",
+    name: "Amanda aka Sidewinder",
     description: `Performing with Circus Something since it’s inception in 2023, Amanda is a beloved Slither Siren, Shadow Monster, and Luminary. A world traveler, dog mama, contortion student, and lover of all things dark and macabre, Amanda has been an asset to both The Slither Sirens and Circus Something since joining the crew. She brings da booty and a bag ‘o’ deez nuts to hold ya down. And she will, hold ya down... By the throat if you assume her sweet face is an invitation. It’s not. Leave her alone`,
     image: "CastAndCrew/Amanda.jpg",
   },
   Helen: {
-    name: "Adder",
+    name: "Helen aka Death Adder",
     description:
       "Helen is a dancer and beginner contortionist with a passion for performing. She has been dancing for around a decade, but has just started getting more serious about being on stage in the past few years. Her background is in yoga, contemporary dance and bellydance, which all in turn led her to pursue contortion starting in 2021.",
     image: "CastAndCrew/Helen.jpg",
+  },
+  Lucy: {
+    name: "Lucy aka Diamondback",
+    description:
+      "Based in SF, Lucy Wonsower is a visual artist turned performer who seeks new forms of expression and storytelling through strength, flexibility, and grace. She is most fragrant.",
+    image: "CastAndrew/Lucy.jpg",
   },
   Quin: {
     name: "Harlequin Grim",
