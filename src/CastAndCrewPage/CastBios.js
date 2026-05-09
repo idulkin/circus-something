@@ -6,23 +6,23 @@ export const castBios = {
     image: "CastAndCrew/Sparkles.jpg",
   },
   Irene: {
-    name: "Irene aka White Lipped Python",
+    name: "Irene, White Lipped Python",
     description: `Irene found circus arts as an adult — no background, no roadmap, nothing but a body willing to be remade. What followed was years of devotion: training in contortion and aerial arts until her body learned to move in ways that shouldn't quite work — and yet do. A member of the Slither Sirens since 2022, she brings that unsettling grace to the stage, crafting performances that live in the space between beautiful and wrong, and follow you home...`,
     image: "CastAndCrew/Irene.jpg",
   },
   Amanda: {
-    name: "Amanda aka Sidewinder",
+    name: "Amanda, Sidewinder",
     description: `Performing with Circus Something since it’s inception in 2023, Amanda is a beloved Slither Siren, Shadow Monster, and Luminary. A world traveler, dog mama, contortion student, and lover of all things dark and macabre, Amanda has been an asset to both The Slither Sirens and Circus Something since joining the crew. She brings da booty and a bag ‘o’ deez nuts to hold ya down. And she will, hold ya down... By the throat if you assume her sweet face is an invitation. It’s not. Leave her alone`,
     image: "CastAndCrew/Amanda.jpg",
   },
   Helen: {
-    name: "Helen aka Death Adder",
+    name: "Helen, Death Adder",
     description:
       "Helen is a dancer and beginner contortionist with a passion for performing. She has been dancing for around a decade, but has just started getting more serious about being on stage in the past few years. Her background is in yoga, contemporary dance and bellydance, which all in turn led her to pursue contortion starting in 2021.",
     image: "CastAndCrew/Helen.jpg",
   },
   Lucy: {
-    name: "Lucy aka Cottonmouth",
+    name: "Lucy, Cottonmouth",
     description:
       "Based in SF, Lucy Wonsower is a visual artist turned performer who seeks new forms of expression and storytelling through strength, flexibility, and grace. She is most fragrant.",
     image: "CastAndCrew/Lucy.jpg",
@@ -59,7 +59,7 @@ export const castBios = {
   },
   Cat: {
     name: "Cat Mui",
-    description: `ᚠᛁᚾᚱᛖ ᚲᚨᛏ ᛗᚢᛁ ᚹᛁᛏᚺ ᚹᛁᛚᛞ ᛗᛁᛋᛏ ᚱᚢᚾᛖᛋ ᛟᚠ ᛋᚺᚨᛞᛟᚹᛋ ᛋᛖᚨᛚᛖᛞ ᛒᚣ ᛗᚨᚷᛁᚲ ᛚᛁᚷᚺᛏ ᚲᚱᛖᛋᛏᛗᛟᛟᚾ ᛋᛏᚱᛖᚾᚷᛏᚺ ᛟᚠ ᛏᚺᛖ ᛏᚺᚱᛟᚾᛖ`,
+    description: `ᚠᛁᚾᚱᛖ ᚲᚨᛏ ᛗᚢᛁ ᚹᛁᛏᚺ ᚹᛁᛚᛞ ᛗᛁᛋᛏ ᚱᚢᚾᛖᛋ ᛟᚠ ᛋᚺᚨᛞᛟᚹᛋ ᛋᛖᚨᛚᛖᛞ ᛒᚣ ᛗᚨᚷᛁᚲ ᛚᛁᚷᚺᛏ ᚲᚱᛖᛋᛏᛗᛟᛟᚾ ᛋᛏᚱᛖᚾᚷᛏᚺ ᛟᚠ ᛏᚺᛖ ᛏᚺᚱᛟᚾ ᛖᚠᛁᚾᚱᛖ ᚲᚨᛏ ᛗᚢᛁ ᚹᛁᛏᚺ ᚹᛁᛚᛞ ᛗᛁᛋᛏ ᚱᚢᚾᛖᛋ ᛟᚠ ᛋᚺᚨᛞᛟᚹᛋ ᛋᛖᚨᛚᛖᛞ ᛒᚣ ᛗᚨᚷᛁᚲ ᛚᛁᚷᚺᛏ ᚲᚱᛖᛋᛏᛗᛟᛟᚾ ᛋᛏᚱᛖᚾᚷᛏᚺ ᛟᚠ ᛏᚺᛖ ᛏᚺᚱᛟᚾᛖ`,
     image: "CastAndCrew/Cat.jpg",
   }
 };
