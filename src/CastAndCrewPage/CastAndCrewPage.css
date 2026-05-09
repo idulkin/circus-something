@@ -39,3 +39,23 @@
   padding-bottom: 32px;
   margin-top: 32px;
 }
+
+.page-container > .text {
+  color: var(--color-primary);
+  font-size: var(--font-size-lg);
+  margin: 24px 0;
+  text-align: center;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    align-items: center;
+  }
+
+  .page-container > .text {
+    font-size: var(--font-size-base);
+    width: 100%;
+    max-width: 100%;
+  }
+}
