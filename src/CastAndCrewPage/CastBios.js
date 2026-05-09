@@ -7,7 +7,7 @@ export const castBios = {
   },
   Irene: {
     name: "Irene aka White Lipped Python",
-    description: `Irene started with a simple goal: "just get my splits." What followed was a journey into the art of contortion, where she discovered the strange and beautiful joy of twisting her body into new realms of possibility. A member of the Slither Sirens since 2022, Irene now returns as the embodiment of darkness, exploring what happens when light fades and the unknown takes form.`,
+    description: `Irene found circus arts as an adult — no background, no roadmap, nothing but a body willing to be remade. What followed was years of devotion: training in contortion and aerial arts until her body learned to move in ways that shouldn't quite work — and yet do. A member of the Slither Sirens since 2022, she brings that unsettling grace to the stage, crafting performances that live in the space between beautiful and wrong, and follow you home...`,
     image: "CastAndCrew/Irene.jpg",
   },
   Amanda: {
@@ -22,7 +22,7 @@ export const castBios = {
     image: "CastAndCrew/Helen.jpg",
   },
   Lucy: {
-    name: "Lucy aka Diamondback",
+    name: "Lucy aka Cottonmouth",
     description:
       "Based in SF, Lucy Wonsower is a visual artist turned performer who seeks new forms of expression and storytelling through strength, flexibility, and grace. She is most fragrant.",
     image: "CastAndCrew/Lucy.jpg",
@@ -49,7 +49,7 @@ export const castBios = {
   },
   Shannon: {
     name: "Shannon Burla",
-    description: `Shannon Burla is an international performer and a teacher of sword dance hailing from Oakland, California. Shannon is inspired by the seasons and by change...by the crossroads, mist and wildflowers. She is the creatrix of the sword dance style, Sword Magick and an ordained Priestess of the Elements in The Order of the Stag and the Rose.`,
+    description: `Shannon Burla is an international performer and a teacher of sword dance hailing from Oakland, California. Shannon is inspired by the seasons and by change...by the crossroads, mist and wildflowers. She is the creatrix of the sword dance style, Sword Magick and an ordained Priestess of Spirit in The Order of the Stag and the Rose.`,
     image: "CastAndCrew/Shannon.jpg",
   },
   Klowndra: {
@@ -57,4 +57,9 @@ export const castBios = {
     description: `Klowndra is an explosive creature. They can be found all over the Bay Area: performing in circus shows, juggling at protests, twisting balloons for elders, puppeteering for children, miming with trees, and roller skating all over your face. This award winning clown strives to make art that injects humanity right into the pulse of the people.`,
     image: "CastAndCrew/klowndra.jpg",
   },
+  Cat: {
+    name: "Cat Mui",
+    description: `ᚠᛁᚾᚱᛖ ᚲᚨᛏ ᛗᚢᛁ ᚹᛁᛏᚺ ᚹᛁᛚᛞ ᛗᛁᛋᛏ ᚱᚢᚾᛖᛋ ᛟᚠ ᛋᚺᚨᛞᛟᚹᛋ ᛋᛖᚨᛚᛖᛞ ᛒᚣ ᛗᚨᚷᛁᚲ ᛚᛁᚷᚺᛏ ᚲᚱᛖᛋᛏᛗᛟᛟᚾ ᛋᛏᚱᛖᚾᚷᛏᚺ ᛟᚠ ᛏᚺᛖ ᛏᚺᚱᛟᚾᛖ`,
+    image: "CastAndCrew/Cat.jpg",
+  }
 };
