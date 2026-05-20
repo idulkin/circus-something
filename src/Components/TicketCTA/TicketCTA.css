@@ -1,3 +1,15 @@
+@keyframes rainbow-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .ticket-container {
   display: flex;
   justify-content: center;
@@ -9,13 +21,23 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(255, 0, 0, 0.1), rgba(255, 0, 0, 0.2));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 0, 0, 0.3),
+    rgba(255, 127, 0, 0.3),
+    rgba(0, 255, 0, 0.3),
+    rgba(0, 127, 255, 0.3),
+    rgba(139, 0, 255, 0.3),
+    rgba(255, 0, 0, 0.3)
+  );
+  background-size: 200% 200%;
+  animation: rainbow-shift 3s ease infinite;
   border: 2px solid var(--color-secondary);
   color: var(--color-primary);
   padding: var(--spacing-lg) var(--spacing-2xl);
   font-size: var(--font-size-xl);
   cursor: pointer;
-  transition: all var(--transition-base);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
   text-transform: uppercase;
   font-family: inherit;
   font-weight: 700;
@@ -28,11 +50,17 @@
 
 .ticket-button:hover,
 .ticket-button:focus-visible {
-  background: linear-gradient(135deg, rgba(255, 0, 0, 0.2), rgba(255, 0, 0, 0.3));
   transform: translateY(-3px);
-  box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+  box-shadow: 0 0 40px rgba(255, 100, 0, 0.7);
 }
 
 .ticket-button:active {
   transform: translateY(-1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticket-button {
+    animation: none;
+    background: linear-gradient(135deg, rgba(255, 0, 0, 0.2), rgba(139, 0, 255, 0.2));
+  }
 }
