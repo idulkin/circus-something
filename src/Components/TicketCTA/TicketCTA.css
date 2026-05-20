@@ -1,0 +1,38 @@
+.ticket-container {
+  display: flex;
+  justify-content: center;
+  margin: var(--spacing-xl) 0;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.ticket-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(255, 0, 0, 0.1), rgba(255, 0, 0, 0.2));
+  border: 2px solid var(--color-secondary);
+  color: var(--color-primary);
+  padding: var(--spacing-lg) var(--spacing-2xl);
+  font-size: var(--font-size-xl);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-transform: uppercase;
+  font-family: inherit;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  border-radius: var(--radius-md);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  text-decoration: none;
+}
+
+.ticket-button:hover,
+.ticket-button:focus-visible {
+  background: linear-gradient(135deg, rgba(255, 0, 0, 0.2), rgba(255, 0, 0, 0.3));
+  transform: translateY(-3px);
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+}
+
+.ticket-button:active {
+  transform: translateY(-1px);
+}

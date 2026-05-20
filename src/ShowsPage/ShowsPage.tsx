@@ -16,6 +16,7 @@ import TLN4 from "../assets/TLN2024Program/4.png";
 import TLN5 from "../assets/TLN2024Program/5.png";
 import TLN6 from "../assets/TLN2024Program/6.png";
 import TLN7 from "../assets/TLN2024Program/7.png";
+import TicketCTA from "../Components/TicketCTA/TicketCTA";
 
 const ShowsPage: React.FC = () => {
   const tln2024Program = [TLN1, TLN2, TLN3, TLN4, TLN5, TLN6, TLN7];
@@ -32,6 +33,10 @@ const ShowsPage: React.FC = () => {
       </div>
       <div className="content-container">
         <h1 className="title">SHOWS</h1>
+          <TicketCTA
+            href="https://circussomething.ticketspice.com/the-longest-day-addiction"
+            label="TICKETS FOR THE LONGEST DAY"
+          />
         <div className="page-container">
           <ShowDescription
             title="THE LONGEST NIGHT 2024"

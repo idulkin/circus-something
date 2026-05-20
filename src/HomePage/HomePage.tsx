@@ -4,6 +4,7 @@ import title_logo from "../assets/cs-final-logotype-white_orig.png";
 import Patreon from "../assets/Patreon.png";
 
 import MenuBar from "../MenuBar/MenuBar";
+import TicketCTA from "../Components/TicketCTA/TicketCTA";
 import "./HomePage.css";
 import CultSignup from "../CultSignup/CultSignup";
 
@@ -21,17 +22,10 @@ const HomePage: React.FC = () => {
           <h2 className="subtitle">Avant-garde ritual circus theater</h2>
         </div>
         <div className="description-container">
-          {/* <div className="ticket-container">
-            <a
-              href="https://circussomething.ticketspice.com/the-longest-night-2025-"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="ticket-button">
-                TICKETS FOR THE LONGEST NIGHT
-              </button>
-            </a>
-          </div> */}
+          <TicketCTA
+            href="https://circussomething.ticketspice.com/the-longest-day-addiction"
+            label="TICKETS FOR THE LONGEST DAY"
+          />
           {/* <a
             className={`intensive-card${flipped ? " flipped" : ""}`}
             href="https://docs.google.com/forms/d/e/1FAIpQLSdWNUC3FZd0YORMkNxtsalRoNSd8fMcR9z7stHJdAf8iNdxjg/viewform?pli=1"
