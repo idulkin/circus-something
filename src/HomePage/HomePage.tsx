@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import CS_logo_only from "../assets/CS_logo_only.png";
 import title_logo from "../assets/cs-final-logotype-white_orig.png";
 import Patreon from "../assets/Patreon.png";
+import TLD1 from "../assets/TLD2026Program/1.png";
+import TLD2 from "../assets/TLD2026Program/2.png";
+import TLD3 from "../assets/TLD2026Program/3.png";
+import TLD4 from "../assets/TLD2026Program/4.png";
+import TLD5 from "../assets/TLD2026Program/5.png";
+import TLD6 from "../assets/TLD2026Program/6.png";
+import TLD7 from "../assets/TLD2026Program/7.png";
+import ImageCarousel from "../Components/Program/ImageCarousel";
 
 import MenuBar from "../MenuBar/MenuBar";
 import TicketCTA from "../Components/TicketCTA/TicketCTA";
@@ -9,7 +17,8 @@ import "./HomePage.css";
 import CultSignup from "../CultSignup/CultSignup";
 
 const HomePage: React.FC = () => {
-  // const [flipped, setFlipped] = useState(false);
+  const [isProgramOpen, setIsProgramOpen] = useState(false);
+  const tld2026Program = [TLD1, TLD2, TLD3, TLD4, TLD5, TLD6, TLD7];
 
   return (
     <div className="background-container">
@@ -22,6 +31,20 @@ const HomePage: React.FC = () => {
           <h2 className="subtitle">Avant-garde ritual circus theater</h2>
         </div>
         <div className="description-container">
+          <div className="program-container">
+            <button
+              className="program-button"
+              onClick={() => setIsProgramOpen(true)}
+            >
+              THE LONGEST DAY 2026 PROGRAM
+            </button>
+            <ImageCarousel
+              images={tld2026Program}
+              isOpen={isProgramOpen}
+              onClose={() => setIsProgramOpen(false)}
+            />
+          </div>
+
           <TicketCTA
             href="https://circussomething.ticketspice.com/the-longest-day-addiction"
             label="TICKETS FOR THE LONGEST DAY"
