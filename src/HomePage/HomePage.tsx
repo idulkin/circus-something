@@ -31,7 +31,7 @@ const HomePage: React.FC = () => {
           <h2 className="subtitle">Avant-garde ritual circus theater</h2>
         </div>
         <div className="description-container">
-          <div className="program-container">
+          {/* <div className="program-container">
             <button
               className="program-button"
               onClick={() => setIsProgramOpen(true)}
@@ -43,12 +43,12 @@ const HomePage: React.FC = () => {
               isOpen={isProgramOpen}
               onClose={() => setIsProgramOpen(false)}
             />
-          </div>
+          </div> */}
 
-          <TicketCTA
+          {/* <TicketCTA
             href="https://circussomething.ticketspice.com/the-longest-day-addiction"
             label="TICKETS FOR THE LONGEST DAY"
-          />
+          /> */}
           {/* <a
             className={`intensive-card${flipped ? " flipped" : ""}`}
             href="https://docs.google.com/forms/d/e/1FAIpQLSdWNUC3FZd0YORMkNxtsalRoNSd8fMcR9z7stHJdAf8iNdxjg/viewform?pli=1"
