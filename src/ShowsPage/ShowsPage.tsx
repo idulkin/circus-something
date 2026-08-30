@@ -33,10 +33,10 @@ const ShowsPage: React.FC = () => {
       </div>
       <div className="content-container">
         <h1 className="title">SHOWS</h1>
-          <TicketCTA
+          {/* <TicketCTA
             href="https://circussomething.ticketspice.com/the-longest-day-addiction"
             label="TICKETS FOR THE LONGEST DAY"
-          />
+          /> */}
         <div className="page-container">
           <ShowDescription
             title="THE LONGEST NIGHT 2024"
