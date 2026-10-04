@@ -33,7 +33,7 @@ export const castBios = {
     image: "CastAndCrew/Quin.jpg",
   },
   Lea: {
-    name: "Aquillea Grace",
+    name: "Achillea Grace",
     description: `A fascinating creature of extremes who worked her way into performing arts from behind busy kitchens, Achillea is an accomplished aerialist whose unique stage presence combines a dynamic range of movements, strength, mobility and characters in her performances. Though aerial hoop is her favored discipline, she also performs contortion, unicycle, juggling, and other aerial apparatuses.`,
     image: "CastAndCrew/Lea.jpg",
   },
