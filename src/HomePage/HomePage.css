@@ -32,6 +32,10 @@
   padding: 0 var(--spacing-md);
 }
 
+.background-container .description-container {
+  border-radius: 0;
+}
+
 .row-container {
   display: flex;
   flex-direction: row;
@@ -301,4 +305,3 @@
     width: min(85vw, 400px);
   }
 }
-
