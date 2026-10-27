@@ -21,6 +21,22 @@ const YouTubeIcon = () => (
   </svg>
 );
 
+const SpotifyIcon = () => (
+  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <defs>
+      <mask id="spotify-icon-mask" maskUnits="userSpaceOnUse">
+        <circle cx="12" cy="12" r="10" fill="white" />
+        <g fill="black" transform="translate(0.5 0.5)">
+          <path d="M16.59 16.42a.75.75 0 0 1-1.03.25c-2.82-1.72-6.37-2.11-10.55-1.16a.75.75 0 1 1-.33-1.46c4.58-1.05 8.51-.6 11.66 1.34.35.22.46.68.25 1.03Z" />
+          <path d="M18.06 13.15a.94.94 0 0 1-1.29.31c-3.23-1.99-8.16-2.57-11.98-1.41a.94.94 0 1 1-.55-1.8c4.37-1.33 9.8-.69 13.5 1.59.44.27.58.85.32 1.3Z" />
+          <path d="M18.18 9.74c-3.88-2.3-10.28-2.52-13.98-1.39a1.13 1.13 0 1 1-.66-2.16c4.25-1.29 11.31-1.04 15.78 1.61a1.13 1.13 0 1 1-1.14 1.94Z" />
+        </g>
+      </mask>
+    </defs>
+    <circle cx="12" cy="12" r="10" fill="currentColor" mask="url(#spotify-icon-mask)" />
+  </svg>
+);
+
 const MenuBar: React.FC = () => {
   const navigate = useNavigate();
   const [menuHeight, setMenuHeight] = useState(window.innerHeight / 16);
@@ -101,6 +117,16 @@ const MenuBar: React.FC = () => {
           rel="noopener noreferrer"
         >
           <YouTubeIcon />
+        </a>
+        <a
+          className="social-link"
+          href="https://open.spotify.com/user/31jwjmywjnsrirrwi2v4bsxv42fe"
+          aria-label="Circus Something on Spotify"
+          title="Circus Something on Spotify"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <SpotifyIcon />
         </a>
       </div>
     </div>
