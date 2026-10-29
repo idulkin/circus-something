@@ -45,10 +45,10 @@ const HomePage: React.FC = () => {
             />
           </div> */}
 
-          { <TicketCTA
+          {/* <TicketCTA
             href="https://circussomething.ticketspice.com/the-longest-night-2026"
             label="TICKETS FOR THE LONGEST NIGHT"
-          /> }
+          /> */}
           {/* <a
             className={`intensive-card${flipped ? " flipped" : ""}`}
             href="https://docs.google.com/forms/d/e/1FAIpQLSdWNUC3FZd0YORMkNxtsalRoNSd8fMcR9z7stHJdAf8iNdxjg/viewform?pli=1"
