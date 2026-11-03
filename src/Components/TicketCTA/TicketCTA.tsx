@@ -3,7 +3,7 @@ import "./TicketCTA.css";
 
 type TicketCTAProps = {
   href: string;
-  label: string;
+  label: React.ReactNode;
 };
 
 const TicketCTA: React.FC<TicketCTAProps> = ({ href, label }) => (
