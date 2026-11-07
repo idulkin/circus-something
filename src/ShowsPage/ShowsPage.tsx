@@ -39,6 +39,26 @@ const ShowsPage: React.FC = () => {
           /> */}
         <div className="page-container">
           <ShowDescription
+            title="THE LONGEST DAY 2025: SURVIVAL"
+            videoUrl="https://www.youtube.com/embed/NAHPkzSNfgo"
+            description={[
+              "The Hierophant asked, \"How does the darkness survive when things are so bright?\"",
+              "And the Sword Dancer answered, \"How the dark adds depth.\"",
+              "So the Hierophant asked, \"How does the light survive when things are dark?\"",
+              "And the Sword Dancer answered, \"How the light can add illumination or hope.\"",
+              "\"How when both are present with the other there is a deeper perspective. A deeper understanding, and a stronger balance,\" said the Sword Dancer.",
+              "Either The Human or The Demon reminded us, \"That light only produces shadow when there is something to obstruct its path. If there were no obstructions, there would be no shadow.\"",
+              <>
+                The Hierophant was delighted at the churning of creative minds, inspired!
+                <br />
+              </>,
+              "Then the In-Betweener, the steward of the here and there said, \"At one point, the things that we turned to that maybe have become vice probably have an origin story associated with security. That when we try to move towards a behavior that's wildly virtuous very commonly we're holding that up against something such as dogmatic religious intolerance. That we need to basically get rid of the things that we are unable to get rid of, such as things that can erode, decay, distress, or destroy us. I am a very strong believer that the coping mechanisms, the behaviors that we turn to which help us get through are there for a reason.\"",
+            ]}
+            isExpanded={expandedShowIndex === 0}
+            onToggle={() => handleToggle(0)}
+          />
+
+          <ShowDescription
             title="THE LONGEST NIGHT 2024"
             videoUrl="https://www.youtube.com/embed/hVq64WwAlXM"
             description={[
@@ -52,8 +72,8 @@ const ShowsPage: React.FC = () => {
             imagePosition="left"
             showProgram={tln2024Program}
             programTitle="THE LONGEST NIGHT 2024 PROGRAM"
-            isExpanded={expandedShowIndex === 0}
-            onToggle={() => handleToggle(0)}
+            isExpanded={expandedShowIndex === 1}
+            onToggle={() => handleToggle(1)}
           />
 
           <ShowDescription
@@ -69,8 +89,8 @@ const ShowsPage: React.FC = () => {
             photoLink="https://firedragonphotography.pixieset.com/longestday-saturday/"
             photoLinkText="Pictures from The Longest Day 2024"
             imagePosition="right"
-            isExpanded={expandedShowIndex === 1}
-            onToggle={() => handleToggle(1)}
+            isExpanded={expandedShowIndex === 2}
+            onToggle={() => handleToggle(2)}
           />
 
           <ShowDescription
@@ -86,8 +106,8 @@ const ShowsPage: React.FC = () => {
             photoLink="https://firedragonphotography.pixieset.com/thelongestnight/"
             photoLinkText="Pictures from The Longest Night 2023"
             imagePosition="left"
-            isExpanded={expandedShowIndex === 2}
-            onToggle={() => handleToggle(2)}
+            isExpanded={expandedShowIndex === 3}
+            onToggle={() => handleToggle(3)}
           />
 
           <img

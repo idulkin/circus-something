@@ -5,9 +5,9 @@ import "./ShowDescription.css";
 interface ShowDescriptionProps {
   title: string;
   videoUrl: string;
-  description: string[];
-  imageUrl: string;
-  imageAlt: string;
+  description: React.ReactNode[];
+  imageUrl?: string;
+  imageAlt?: string;
   photoLink?: string;
   photoLinkText?: string;
   imagePosition?: "left" | "right";
@@ -51,7 +51,7 @@ const ShowDescription: React.FC<ShowDescriptionProps> = ({
     </div>
   );
 
-  const imageColumn = (
+  const imageColumn = imageUrl && (
     <div className="column">
       <img src={imageUrl} className="image" alt={imageAlt} />
     </div>
