@@ -12,9 +12,19 @@
 }
 
 .page-container {
-  background-color: var(--color-background);
   padding-top: var(--spacing-2xl);
   padding-bottom: var(--spacing-2xl);
+}
+
+/* Higher-specificity override: .page-container is an unscoped class also
+   declared by other pages' CSS files, and every page is statically
+   imported in App.tsx so all stylesheets end up bundled together. This
+   keeps the background image visible behind the show descriptions and
+   gives ShadowSwim a positioned container to bind to, matching HomePage. */
+.background-container .page-container {
+  background-color: transparent;
+  position: relative;
+  z-index: 0;
 }
 
 .menu-container {

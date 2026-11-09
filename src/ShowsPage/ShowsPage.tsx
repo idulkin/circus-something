@@ -17,6 +17,7 @@ import TLN5 from "../assets/TLN2024Program/5.png";
 import TLN6 from "../assets/TLN2024Program/6.png";
 import TLN7 from "../assets/TLN2024Program/7.png";
 import TicketCTA from "../Components/TicketCTA/TicketCTA";
+import ShadowSwim from "../Components/ShadowSwim/ShadowSwim";
 
 const ShowsPage: React.FC = () => {
   const tln2024Program = [TLN1, TLN2, TLN3, TLN4, TLN5, TLN6, TLN7];
@@ -45,6 +46,7 @@ const ShowsPage: React.FC = () => {
           /> }
  
         <div className="page-container">
+          <ShadowSwim />
           <ShowDescription
             title="THE LONGEST DAY 2025: SURVIVAL"
             videoUrl="https://www.youtube.com/embed/NAHPkzSNfgo"
