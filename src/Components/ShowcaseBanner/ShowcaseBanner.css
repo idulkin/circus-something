@@ -1,0 +1,83 @@
+@keyframes showcase-fade-in {
+  from {
+    opacity: 0;
+    transform: scale(1.03);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.showcase-banner {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background-color: var(--color-background);
+}
+
+@media (min-width: 768px) {
+  .showcase-banner {
+    aspect-ratio: 16 / 6;
+  }
+}
+
+.showcase-banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .showcase-banner-image {
+    animation: showcase-fade-in 1.2s ease-out;
+  }
+}
+
+.showcase-banner-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  text-align: center;
+  padding: var(--spacing-xl);
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.showcase-banner-caption {
+  margin: 0;
+  max-width: 700px;
+  color: var(--color-primary);
+  font-size: var(--font-size-2xl);
+  font-style: italic;
+  letter-spacing: 0.03em;
+  line-height: 1.5;
+  text-shadow: var(--shadow-lg);
+}
+
+@media (min-width: 768px) {
+  .showcase-banner-caption {
+    font-size: var(--font-size-3xl);
+  }
+}
+
+.showcase-banner-link {
+  color: var(--color-secondary);
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-shadow: var(--shadow-md);
+  transition: color var(--transition-base);
+}
+
+.showcase-banner-link:hover,
+.showcase-banner-link:focus-visible {
+  color: var(--color-primary);
+}

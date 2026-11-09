@@ -1,0 +1,59 @@
+.shadow-swim {
+  position: absolute;
+  /* Bleed vertically past the container so the blurred fade has room to
+     resolve before it would otherwise get clipped; flush left/right since
+     the shadow should span the full width of the text column. */
+  top: -60px;
+  bottom: -60px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.shadow-swim-core {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.95);
+  filter: blur(26px);
+  mix-blend-mode: multiply;
+  /* Soft, blob-like fuzz on the top/bottom edges only, instead of a flat
+     rectangle cutting across the backdrop. Left/right stay flush with the
+     text column. */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 20%,
+    black 80%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 20%,
+    black 80%,
+    transparent 100%
+  );
+  animation: shadow-pulse 16s ease-in-out infinite;
+}
+
+@keyframes shadow-pulse {
+  /* Pulses from the current (scroll-driven) intensity down to darker and
+     back, rather than ever going lighter than the current baseline. */
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: var(--scroll-intensity, 0.8);
+  }
+  50% {
+    transform: scale(1.04);
+    opacity: min(1, calc(var(--scroll-intensity, 0.8) + 0.15));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shadow-swim-core {
+    animation: none;
+    opacity: 0.8;
+  }
+}
