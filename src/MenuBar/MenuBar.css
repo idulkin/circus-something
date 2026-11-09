@@ -2,8 +2,11 @@
   background-color: transparent;
   width: 100%;
   padding: var(--spacing-md) 0;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 1000;
+  pointer-events: none;
 }
 
 .button-container {
@@ -13,11 +16,10 @@
   gap: var(--spacing-xl);
   padding: 0 var(--spacing-2xl);
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .menu-button {
+  pointer-events: auto;
   background: var(--color-surface);
   color: var(--color-primary);
   border: 2px solid var(--color-border);
@@ -91,6 +93,7 @@
   flex-direction: row;
   gap: var(--spacing-md);
   z-index: 1000;
+  pointer-events: auto;
 }
 
 .social-link {
