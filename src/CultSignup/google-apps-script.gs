@@ -2,7 +2,7 @@
  * Google Apps Script for CultSignup.
  *
  * Setup:
- * 1. Create a Google Sheet to collect signups. Add a header row: "Email".
+ * 1. Create a Google Sheet to collect signups. Add a header row: "Email", "Name", "Date".
  * 2. In the sheet: Extensions > Apps Script. Paste this file's contents in, replacing
  *    any boilerplate.
  * 3. Deploy > New deployment > type "Web app".
@@ -18,6 +18,7 @@ function doPost(e) {
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
   const data = JSON.parse(e.postData.contents);
   const email = (data.email || "").trim();
+  const name = (data.name || "").trim();
 
   const validationRegex = /\S+@\S+\.\S+/;
   if (!validationRegex.test(email)) {
@@ -26,7 +27,13 @@ function doPost(e) {
     ).setMimeType(ContentService.MimeType.JSON);
   }
 
-  sheet.appendRow([email]);
+  const date = Utilities.formatDate(
+    new Date(),
+    Session.getScriptTimeZone(),
+    "MM/dd/yyyy"
+  );
+
+  sheet.appendRow([email, name, date]);
 
   return ContentService.createTextOutput(
     JSON.stringify({ result: "success" })

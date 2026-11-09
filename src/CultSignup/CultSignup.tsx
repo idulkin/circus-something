@@ -12,8 +12,11 @@ const EMAIL_VALIDATION_REGEX = /^\S+@\S+\.\S+$/;
 
 const CultSignup: React.FC = () => {
   const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
   const [message, setMessage] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const isEmailValid = EMAIL_VALIDATION_REGEX.test(email.trim());
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -24,6 +27,7 @@ const CultSignup: React.FC = () => {
     }
 
     const trimmedEmail = email.trim();
+    const trimmedName = name.trim();
 
     if (!EMAIL_VALIDATION_REGEX.test(trimmedEmail)) {
       setMessage("Please enter a valid email address.");
@@ -40,11 +44,12 @@ const CultSignup: React.FC = () => {
         method: "POST",
         mode: "no-cors",
         headers: { "Content-Type": "text/plain;charset=utf-8" },
-        body: JSON.stringify({ email: trimmedEmail }),
+        body: JSON.stringify({ email: trimmedEmail, name: trimmedName }),
       });
 
       // Clear the form
       setEmail("");
+      setName("");
       setMessage("Welcome. Your indoctrination begins now.");
     } catch (error) {
       console.error("Error subscribing: ", error);
@@ -60,13 +65,26 @@ const CultSignup: React.FC = () => {
       <form onSubmit={handleSubmit}>
         <input
           type="email"
+          aria-label="Email"
           placeholder="Enter your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
           disabled={isSubmitting}
         />
-        <button className="submit-button" type="submit" disabled={isSubmitting}>
+        <input
+          type="text"
+          aria-label="Name (optional)"
+          placeholder="Enter your name (optional)"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          disabled={isSubmitting}
+        />
+        <button
+          className="submit-button"
+          type="submit"
+          disabled={isSubmitting || !isEmailValid}
+        >
           {isSubmitting ? "SUBMITTING..." : "SUBMIT"}
         </button>
       </form>
