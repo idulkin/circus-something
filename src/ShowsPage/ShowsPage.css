@@ -9,6 +9,7 @@
 
 .content-container {
   text-align: center;
+  padding-top: var(--spacing-2xl);
 }
 
 .page-container {
