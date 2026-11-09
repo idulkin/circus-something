@@ -13,6 +13,7 @@ import ImageCarousel from "../Components/Program/ImageCarousel";
 
 import MenuBar from "../MenuBar/MenuBar";
 import TicketCTA from "../Components/TicketCTA/TicketCTA";
+import ShadowSwim from "../Components/ShadowSwim/ShadowSwim";
 import "./HomePage.css";
 import CultSignup from "../CultSignup/CultSignup";
 
@@ -31,6 +32,7 @@ const HomePage: React.FC = () => {
           <h2 className="subtitle">Avant-garde ritual circus theater</h2>
         </div>
         <div className="description-container">
+          <ShadowSwim />
           {/* <div className="program-container">
             <button
               className="program-button"

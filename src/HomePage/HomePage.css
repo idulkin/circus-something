@@ -1,4 +1,6 @@
 .background-container {
+  position: relative;
+  z-index: 0;
   background-image: url("../assets/Irene_background.png");
   background-size: cover;
   background-attachment: fixed;
@@ -23,6 +25,15 @@
   width: 100%;
 }
 
+/* Higher-specificity override: .page-container is an unscoped class also
+   declared by ShowsPage.css with an opaque background-color, and both
+   stylesheets end up bundled together (every page is statically imported
+   in App.tsx). Without this, that rule wins the cascade on this page and
+   paints over the background image and shadow effect with solid black. */
+.background-container .page-container {
+  background-color: transparent;
+}
+
 .description-container {
   margin-top: var(--spacing-3xl);
   display: flex;
@@ -33,7 +44,16 @@
 }
 
 .background-container .description-container {
+  /* AboutPage.css also declares the unscoped .description-container class,
+     with an opaque background-color, and both stylesheets end up bundled
+     together (every page is statically imported in App.tsx). This
+     higher-specificity rule keeps that from painting over the background
+     image and shadow effect here. It also doubles as the containing block
+     + stacking context for ShadowSwim, so it sizes to exactly this box. */
+  background-color: transparent;
   border-radius: 0;
+  position: relative;
+  z-index: 0;
 }
 
 .row-container {
