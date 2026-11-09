@@ -4,6 +4,7 @@ import MenuBar from "../MenuBar/MenuBar";
 import "./CastAndCrewPage.css";
 import CultSignup from "../CultSignup/CultSignup";
 import BioAndImage from "../Components/BioAndImage/BioAndImage";
+import ShadowSwim from "../Components/ShadowSwim/ShadowSwim";
 import { castBios } from "./CastBios";
 
 const CastAndCrewPage: React.FC = () => {
@@ -16,6 +17,7 @@ const CastAndCrewPage: React.FC = () => {
         <h2 className="title">COMPANY MEMBERS</h2>
         <p className="text">Creatures of darkness and luminaries of light </p>
         <div className="bio-container">
+          <ShadowSwim />
           {Object.entries(castBios).map(([key, bio], index) => (
             <BioAndImage
               key={key}

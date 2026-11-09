@@ -1,6 +1,20 @@
 import React, { useEffect, useRef } from "react";
 import "./ShadowSwim.css";
 
+// Some pages scroll the window; others (e.g. CastAndCrewPage) scroll an
+// internal overflow container instead, so window.scrollY never changes
+// there. Walk up to find whichever one actually scrolls.
+const findScrollParent = (node: HTMLElement | null): HTMLElement | Window => {
+  let el = node?.parentElement ?? null;
+  while (el) {
+    if (/(auto|scroll)/.test(window.getComputedStyle(el).overflowY)) {
+      return el;
+    }
+    el = el.parentElement;
+  }
+  return window;
+};
+
 const ShadowSwim: React.FC = () => {
   const rootRef = useRef<HTMLDivElement>(null);
 
@@ -10,6 +24,12 @@ const ShadowSwim: React.FC = () => {
       return;
     }
 
+    const scrollTarget = findScrollParent(root);
+    const getScrollY = () =>
+      scrollTarget === window
+        ? window.scrollY
+        : (scrollTarget as HTMLElement).scrollTop;
+
     let frameId = 0;
     let ticking = false;
 
@@ -18,7 +38,7 @@ const ShadowSwim: React.FC = () => {
       // Bounded oscillation (rather than a value tied directly to how far
       // scrolled) so the shadow keeps breathing with scroll input no matter
       // how long the page is, instead of maxing out and going flat.
-      const intensity = 0.8 + Math.sin(window.scrollY * 0.0022) * 0.25;
+      const intensity = 0.8 + Math.sin(getScrollY() * 0.0022) * 0.25;
       root.style.setProperty("--scroll-intensity", intensity.toFixed(3));
     };
 
@@ -30,10 +50,10 @@ const ShadowSwim: React.FC = () => {
     };
 
     update();
-    window.addEventListener("scroll", onScroll, { passive: true });
+    scrollTarget.addEventListener("scroll", onScroll, { passive: true });
 
     return () => {
-      window.removeEventListener("scroll", onScroll);
+      scrollTarget.removeEventListener("scroll", onScroll);
       window.cancelAnimationFrame(frameId);
     };
   }, []);

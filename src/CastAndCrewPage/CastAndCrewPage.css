@@ -30,11 +30,13 @@
 }
 
 .bio-container {
+  position: relative;
+  z-index: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: black;
+  background-color: transparent;
   padding-top: 32px;
   padding-bottom: 32px;
   margin-top: 32px;

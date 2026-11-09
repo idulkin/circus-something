@@ -8,14 +8,18 @@
   margin: var(--spacing-xl);
   border-radius: var(--radius-lg);
   gap: var(--spacing-2xl);
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-lg);
-  transition: all var(--transition-base);
+  border: 1px solid transparent;
+  /* A soft, blurred halo rather than a crisp edge, so the card reads as
+     emerging from the shadow behind it instead of sitting on top of it. */
+  box-shadow: 0 0 46px 10px rgba(0, 0, 0, 0.6);
+  transition: box-shadow var(--transition-slow), border-color var(--transition-slow);
 }
 
-.bio-and-image:hover {
-  border-color: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+.bio-and-image:hover,
+.bio-and-image:active {
+  /* The fuzzy halo firms up into a visible, tighter border on interaction. */
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.9), 0 10px 26px rgba(0, 0, 0, 0.55);
 }
 
 .bio-image {
