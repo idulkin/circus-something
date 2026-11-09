@@ -73,25 +73,25 @@ const HomePage: React.FC = () => {
             <img src={IntensiveBack} className="intensive-back" alt="Intensive show poster - back" />
             <span className="intensive-tap-hint">{flipped ? "Tap to open" : "Tap to reveal"}</span>
           </a>
-          <hr className="section-divider" /> */}
-          <div className="patreon-container">
-            <a
-              href="https://www.patreon.com/circussomething"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src={Patreon}
-                className="patreon-image"
-                alt="Support us on Patreon"
-              />
-            </a>
-            <p className="text-red patreon-text">
+          */}
+          <hr className="section-divider" />
+          <a
+            className="patreon-container"
+            href="https://www.patreon.com/circussomething"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={Patreon}
+              className="patreon-image"
+              alt="Support us on Patreon"
+            />
+            <p className="text-white patreon-text">
               The cult demands sacrifice. What are you willing to give? Your
               support ensures that we continue to bring you the highest level of
               theatrical occult indoctrination.
             </p>
-          </div>
+          </a>
           <hr className="section-divider" />
           <p></p>
           <p className="text-white">

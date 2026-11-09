@@ -34,7 +34,7 @@
     black 80%,
     transparent 100%
   );
-  animation: shadow-pulse 16s ease-in-out infinite;
+  animation: shadow-pulse 8s ease-in-out infinite;
 }
 
 @keyframes shadow-pulse {
