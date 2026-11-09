@@ -7,6 +7,7 @@ import MenuBar from "../MenuBar/MenuBar";
 import "./AboutPage.css";
 import CultSignup from "../CultSignup/CultSignup";
 import BioAndImage from "../Components/BioAndImage/BioAndImage";
+import ShadowSwim from "../Components/ShadowSwim/ShadowSwim";
 import { aboutBios } from "./AboutBios";
 
 const AboutPage: React.FC = () => {
@@ -22,18 +23,21 @@ const AboutPage: React.FC = () => {
           and vaguely threatening.{" "}
         </p>
 
-        <BioAndImage
-          image={masksOff}
-          name={aboutBios.Ash.name}
-          description={aboutBios.Ash.description}
-          imageRightOfText={true}
-        />
-        <BioAndImage
-          image={masksOn}
-          name={aboutBios.Igor.name}
-          description={aboutBios.Igor.description}
-          imageRightOfText={false}
-        />
+        <div className="bios-container">
+          <ShadowSwim />
+          <BioAndImage
+            image={masksOff}
+            name={aboutBios.Ash.name}
+            description={aboutBios.Ash.description}
+            imageRightOfText={true}
+          />
+          <BioAndImage
+            image={masksOn}
+            name={aboutBios.Igor.name}
+            description={aboutBios.Igor.description}
+            imageRightOfText={false}
+          />
+        </div>
       </div>
       <CultSignup />
     </div>

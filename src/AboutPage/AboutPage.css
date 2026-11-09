@@ -34,6 +34,19 @@
   align-items: center;
 }
 
+.bios-container {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  padding-top: var(--spacing-xl);
+  padding-bottom: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
+}
+
 .description-container {
   display: flex;
   flex-direction: column;
