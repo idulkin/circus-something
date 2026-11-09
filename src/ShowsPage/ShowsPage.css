@@ -148,7 +148,10 @@
     width: 70vw;
   }
 
-  .text {
+  /* Scoped to .show-description: .text is an unscoped class also used by
+     CultSignup's title, and every page's CSS is bundled together, so an
+     unscoped rule here would shrink and left-align that title too. */
+  .show-description .text {
     width: 70vw;
   }
 
